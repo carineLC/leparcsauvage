@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 ruby '2.4.4'
 
-gem 'activeadmin'
 gem 'bootsnap', require: false
 gem 'devise'
 gem 'jbuilder', '~> 2.0'
@@ -17,6 +16,9 @@ gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
+
+gem 'activeadmin', github: 'activeadmin/activeadmin'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
