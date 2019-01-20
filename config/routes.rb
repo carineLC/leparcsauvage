@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
 
-  #root to: 'pages#accueil'
+  root to: 'pages#accueil'
 
-  resources :blogposts
+  resources :blogposts, path: 'vie-du-parc'
 
   get "ferme-pedagogique", to: 'pages#ferme_pedagogique'
   get "fauconnerie", to: 'pages#fauconnerie'
