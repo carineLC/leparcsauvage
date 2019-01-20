@@ -16,6 +16,9 @@ gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
+gem 'cloudinary', '~> 1.9.1'
+gem 'carrierwave', '~> 1.2'
+
 
 gem 'activeadmin', github: 'activeadmin/activeadmin'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
