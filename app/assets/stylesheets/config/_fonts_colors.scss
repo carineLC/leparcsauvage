@@ -1,0 +1,41 @@
+// Import Google fonts
+@import url("https://fonts.googleapis.com/css?family=PT+Serif|https://fonts.googleapis.com/css?family=Roboto:300,400|Raleway:400,100,300,700,500");
+
+// Define fonts for body and headers
+$body-font: "PT Serif", serif;
+$classic-sans-serif-font: "Roboto", sans-serif;
+$headers-font: "Raleway", "Helvetica", "sans-serif";
+
+$font-size-base: 1rem;
+$font-size-title: 2rem;
+
+$red: #EE5F5B;
+$blue: #469AE0;
+$yellow: #FDB631;
+$orange: #E67E22;
+$green: #74b49b;
+$gray: #000000;
+$light-gray: #F4F4F4;
+$dark-gray:  #2c2828;
+$green-parc: #395C56;
+$gray-title-and-body: #494A4A;
+$gray-subtitle: #818181;
+
+h1.title {
+  font-family: $classic-sans-serif-font;
+  color: $gray-title-and-body;
+  font-size: $font-size-title;
+  letter-spacing: 2px;
+}
+h1.subtitle {
+  font-family: $classic-sans-serif-font;
+  color: $gray-subtitle;
+  font-size: $font-size-title;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+p {
+  font-family: $body-font;
+  color: $gray-title-and-body;
+  font-size: $font-size-base;
+}
