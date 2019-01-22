@@ -1,77 +1,149 @@
 /* Main navbar */
-.navbar-wagon {
-  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-  background: white;
-  transition: all 0.3s ease;
+.navbar-lps {
+  $self: &;
   height: 70px;
+  width: 100%;
   padding: 0px 30px;
+  position: fixed;
+  top: 0;
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 500;
+  transition: all 0.3s ease;
+  &__logo img {
+    height: 60px;
+  }
+  &__link {
+    font-size: 14px;
+    padding: 0 20px;
+    color: white;
+    cursor: pointer;
+    &:hover {
+      color: pink;
+      text-decoration: none;
+    }
+  }
+  &__menu {
+    color: white;
+    padding: 0 10px;
+    flex: 0 1 auto;
+    cursor: pointer;
+    #{ $self }__hamburger {
+      width: 30px;
+      height: 25px;
+      position: absolute;
+      top: 15px;
+      right: 30px;
+      z-index: 500;
+      & div {
+        width: 30px;
+        height: 2px;
+        margin-top: 7px;
+        position: relative;
+        background-color: white;
+        -webkit-transition: all 0.4s ease-in-out;
+                transition: all 0.4s ease-in-out;
+      }
+    }
+    #{ $self }__wrapper{
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: -100%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      overflow: hidden;
+      z-index: 100;
+      -webkit-transition: all 0.5s ease-in-out;
+              transition: all 0.5s ease-in-out;
+      & #{ $self }__items {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        z-index: 500;
+        overflow-y: auto;
+      }
+    }
+    #{ $self }__link{
+      font-size: 12px;
+      color: white;
+      padding: 0 10px;
+      flex: 0 1 auto;
+      cursor: pointer;
+      @media (max-width: 768px){
+        font-size: 20px;
+      }
+    }
+  }
+  &--white {
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+    background-color: green;
+  }
 }
 
-/* Logo */
-.navbar-wagon-brand img {
-  height: 50px;
+#toggle {
+  display: none;
 }
 
-/* User Avatar */
-.navbar-wagon .avatar {
-  height: 35px;
-  width: 35px;
-  border-radius: 50%;
+/* Hamburger Animation */
+#toggle:checked + .navbar-lps__hamburger {
+  & .navbar-lps__top {
+    margin-top: 22.5px;
+    background-color: white;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  & .navbar-lps__middle {
+    margin-top: -2px;
+    background-color: white;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  & .navbar-lps__bottom {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  }
+  & + .navbar-lps__wrapper {
+    top: 0;
+    background-color: green;
+    & .navbar-lps__items nav a {
+      opacity: 0.9;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
 }
 
-/* Right section */
-.navbar-wagon-right {
+/* Menu Styling */
+nav {
+  height: 100vh;
+  text-align: center;
+  display: -webkit-box;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* Basic navbar item */
-.navbar-wagon-item {
-  cursor: pointer;
-  padding: 0 20px;
-}
-
-/* Navbar link */
-.navbar-wagon-link {
-  color: #616668;
-  font-size: 14px;
-}
-.navbar-wagon-link:hover {
-  color: #da552f;
-  text-decoration: none;
-}
-
-/* Dropdown menu */
-.navbar-wagon-dropdown-menu {
-  margin-top: 15px;
-  box-shadow: 1px 1px 4px #E6E6E6;
-  border-color: #E6E6E6;
-}
-.navbar-wagon-dropdown-menu li > a {
-  transition: color 0.3s ease;
-  font-weight: lighter !important;
-  color: #999999 !important;
-  font-size: 15px !important;
-  line-height: 22px !important;
-  padding: 10px 20px;
-}
-.navbar-wagon-dropdown-menu li > a:hover {
-  background: transparent !important;
-  color: black !important;
-}
-.navbar-wagon-dropdown-menu:before {
-  content: ' ';
-  height: 10px;
-  width: 10px;
-  position: absolute;
-  right: 10px;
-  top: -6px;
-  background-color: white;
-  transform: rotate(45deg);
-  border-left: 1px solid #E6E6E6;
-  border-top: 1px solid #E6E6E6;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  & a{
+    font-size: 14px;
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 15px;
+    color: white;
+    font-weight: bold;
+    -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
 }
