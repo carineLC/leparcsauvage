@@ -2,10 +2,8 @@
   padding: 8px 15px 7px 15px;
   border-radius: 50px;
   font-family: $classic-sans-serif-font;
-  text-decoration: none;
   margin: 4px;
   display: inline-block;
-  background: transparent;
   font-size: 14px;
   letter-spacing: 2px;
   font-weight: 300;
@@ -19,6 +17,7 @@
   color: $gray-title-and-body !important;
   border: 1px solid $gray-title-and-body;
   opacity: 0.6;
+  background: transparent;
 
   &:hover {
   opacity: 1;
