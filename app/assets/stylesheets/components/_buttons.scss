@@ -9,13 +9,13 @@
   font-weight: 300;
 
   &:hover {
-  text-decoration: none !important;
+  text-decoration: none;
   }
 }
 
-.button-simple {
-  color: $gray-title-and-body !important;
-  border: 1px solid $gray-title-and-body;
+.button-transparent {
+  color: $medium-grey;
+  border: 1px solid $medium-grey;
   opacity: 0.6;
   background: transparent;
 
@@ -27,8 +27,8 @@
 
 .button-green {
   color: $light-gray;
-  border: 1px solid $green-parc;
-  background: $green-parc;
+  border: 1px solid $dark-green;
+  background: $dark-green;
 
   &:hover {
   color: $green;

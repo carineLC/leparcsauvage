@@ -14,28 +14,27 @@ $blue: #469AE0;
 $yellow: #FDB631;
 $orange: #E67E22;
 $green: #74b49b;
-$gray: #000000;
 $light-gray: #F4F4F4;
+$grey: #818181;
+$medium-grey: #494A4A;
 $dark-gray:  #2c2828;
-$green-parc: #395C56;
-$gray-title-and-body: #494A4A;
-$gray-subtitle: #818181;
+$dark-green: #395C56;
 
 h1.title {
   font-family: $classic-sans-serif-font;
-  color: $gray-title-and-body;
+  color: $medium-grey;
   font-size: $font-size-title;
   letter-spacing: 2px;
 }
 h1.subtitle {
   font-family: $classic-sans-serif-font;
-  color: $gray-subtitle;
+  color: $grey;
   font-size: $font-size-title;
   font-weight: 300;
   letter-spacing: 2px;
 }
 p {
   font-family: $body-font;
-  color: $gray-title-and-body;
+  color: $medium-grey;
   font-size: $font-size-base;
 }
