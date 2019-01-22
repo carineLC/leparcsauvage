@@ -1,10 +1,10 @@
 // Import Google fonts
-@import url("https://fonts.googleapis.com/css?family=PT+Serif|https://fonts.googleapis.com/css?family=Roboto:300,400|Raleway:400,100,300,700,500");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|https://fonts.googleapis.com/css?family=Oswald:200|https://fonts.googleapis.com/css?family=Roboto:300,400|Raleway:400,100,300,700,500");
 
 // Define fonts for body and headers
 $body-font: "PT Serif", serif;
-$classic-sans-serif-font: "Roboto", sans-serif;
-$headers-font: "Raleway", "Helvetica", "sans-serif";
+$headers-font: 'Open Sans Condensed', sans-serif;
+$sub-headers-font: 'Oswald', sans-serif;
 
 $font-size-base: 1rem;
 $font-size-title: 2rem;
@@ -20,17 +20,16 @@ $medium-grey: #494A4A;
 $dark-gray:  #2c2828;
 $dark-green: #395C56;
 
-h1.title {
-  font-family: $classic-sans-serif-font;
-  color: $medium-grey;
+h1 {
+  font-family: $headers-font;
+  color: $medium-grey !important;
   font-size: $font-size-title;
   letter-spacing: 2px;
 }
-h1.subtitle {
-  font-family: $classic-sans-serif-font;
-  color: $grey;
+h2 {
+  font-family: $sub-headers-font;
+  color: $grey !important;
   font-size: $font-size-title;
-  font-weight: 300;
   letter-spacing: 2px;
 }
 p {
