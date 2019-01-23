@@ -1,13 +1,8 @@
 .button {
   padding: 8px 15px 7px 15px;
   border-radius: 50px;
-  font-family: $sub-headers-font;
   margin: 4px;
   display: inline-block;
-  font-size: 14px;
-  letter-spacing: 2px;
-  font-weight: 300;
-
   &:hover {
   text-decoration: none;
   }
