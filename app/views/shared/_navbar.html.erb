@@ -1,4 +1,4 @@
-<div class="navbar-lps">
+<div class="navbar-lps d-flex align-items-center justify-content-between">
   <a href="/" class="navbar-lps__logo">
     <%= image_tag "logo.png" %>
   </a>
@@ -21,14 +21,14 @@
       </label>
 
       <div class="navbar-lps__wrapper">
-        <div class="navbar-lps__items">
-          <nav class= "d-flex flex-column">
+        <div class="navbar-lps__items d-flex flex-column align-items-center justify-content-center text-center">
+          <!-- <nav class= "d-flex flex-column align-items-center justify-content-center text-center"> -->
             <%= link_to "Le parc", "#", class: "navbar-lps__link" %>
             <%= link_to "Actualités", "#", class: "navbar-lps__link" %>
             <%= link_to "L'équipe", "#", class: "navbar-lps__link" %>
             <%= link_to "Partenariats", "#", class: "navbar-lps__link" %>
             <%= link_to "Infos pratiques", "#", class: "navbar-lps__link" %>
-          </nav>
+          <!-- </nav> -->
         </div>
       </div>
     </div>
