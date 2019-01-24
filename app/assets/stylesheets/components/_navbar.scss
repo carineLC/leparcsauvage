@@ -1,22 +1,18 @@
  // Main navbar
 .navbar-lps {
   $self: &;
-  height: 70px;
+  height: 4.5rem;
   width: 100%;
-  padding: 0 30px;
+  padding: 0 2rem;
   position: fixed;
   top: 0;
   background: $dark-green;
   z-index: 500;
   transition: all 0.3s ease;
-  @media (max-width: 767px) {
-     padding: 0 15px;
-  }
   &__logo img {
     position: absolute;
-    top: 0px;
-    left: 30px;
-    height: 70px;
+    top: 0;
+    height: 4.5rem;
     z-index: 500;
   }
   &--transparent {
@@ -33,12 +29,9 @@
   $self: &;
   &__link {
     color: white;
-    line-height: 70px;
-    padding: 0 20px;
+    line-height: 4.5rem;
+    padding: 0 1rem;
     cursor: pointer;
-    @media (max-width: 991px) {
-     padding: 0 15px;
-  }
     &:hover {
       background-color: $green;
       color: white;
@@ -59,12 +52,12 @@
       background-color: $green;
       display: none;
       position: absolute;
-      width: 250px;
+      width: 15.5rem;
       #{ $self }__sublink {
         color: white;
         cursor: pointer;
-        line-height: 50px;
-        padding-left: 20px;
+        line-height: 3rem;
+        padding-left: 1.25rem;
         display: block;
         &:hover {
           height: 100%;
@@ -77,10 +70,6 @@
   }
 }
 
-#toggle {
-  display: none;
-}
-
 // navbar for mobile
 .navbar-lps-mobile {
   $self: &;
@@ -88,16 +77,16 @@
     color: white;
     padding: 0 10px;
     #{ $self }__hamburger {
-      width: 30px;
-      height: 25px;
+      width: 2rem;
+      height: 1.25rem;
       position: absolute;
-      top: 15px;
-      right: 30px;
+      top: 1rem;
+      right: 2rem;
       z-index: 500;
       div {
         width: 100%;
-        height: 2px;
-        margin-top: 7px;
+        height: 0.125rem;
+        margin-top: 0.375rem;
         background-color: white;
         -webkit-transition: all .5s ease-in-out;
                 transition: all .5s ease-in-out;
@@ -120,10 +109,9 @@
         z-index: 500;
         #{ $self }__mobilelink{
           color: white;
-          font-size: 18px;
+          font-size: 1.25rem;
           width: 100%;
-          line-height: 50px;
-          padding: 0 20px;
+          line-height: 3.25rem;
           &:hover {
             text-decoration: none;
           }
@@ -134,7 +122,7 @@
             background-color: $green;
             color: white;
             text-decoration: none;
-            padding-bottom: 15px;
+            padding-bottom: 1rem;
           }
           &:hover .navbar-lps-mobile__content {
             display: block;
@@ -145,7 +133,7 @@
             width: 100vw;
             #{ $self }__sublink {
               color: white;
-              line-height: 40px;
+              line-height: 2.5rem;
               display: block;
               &:hover {
                 height: 100%;
@@ -162,14 +150,18 @@
 }
 
 /* Hamburger Animation */
+#toggle {
+  display: none;
+}
+
 #toggle:checked + .navbar-lps-mobile__hamburger {
   .navbar-lps-mobile__top {
-    margin-top: 22.5px;
+    margin-top: 1.375rem;
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
   }
   .navbar-lps-mobile__middle {
-    margin-top: -2px;
+    margin-top: -0.125rem;
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
   }
