@@ -1,5 +1,6 @@
 import 'bootstrap/dist/js/bootstrap';
 import 'bootstrap';
-import { initUpdateNavbarOnScroll } from '../components/navbar';
+import { initUpdateNavbarOnScroll, hideSublinksOnClickHamburger } from '../components/navbar';
 
 initUpdateNavbarOnScroll();
+hideSublinksOnClickHamburger();
