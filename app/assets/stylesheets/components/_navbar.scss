@@ -36,6 +36,9 @@
     line-height: 70px;
     padding: 0 20px;
     cursor: pointer;
+    @media (max-width: 991px) {
+     padding: 0 15px;
+  }
     &:hover {
       background-color: $green;
       color: white;
