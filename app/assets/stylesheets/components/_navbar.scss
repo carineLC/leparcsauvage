@@ -1,14 +1,17 @@
-/* Main navbar */
+ // Main navbar
 .navbar-lps {
   $self: &;
   height: 70px;
   width: 100%;
-  padding: 0px 30px;
+  padding: 0 30px;
   position: fixed;
   top: 0;
   background: transparent;
   z-index: 500;
   transition: all 0.3s ease;
+  @media (max-width: 767px) {
+     padding: 0 15px;
+  }
   &__logo img {
     position: absolute;
     top: 0px;
@@ -16,15 +19,65 @@
     height: 70px;
     z-index: 500;
   }
+  &--white {
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+    background-color: $dark-green;
+  }
+}
+
+// navbar for desktop
+.navbar-lps {
+  $self: &;
   &__link {
     color: white;
+    line-height: 70px;
     padding: 0 20px;
     cursor: pointer;
     &:hover {
-      color: $dark-green;
+      background-color: $green;
+      color: white;
       text-decoration: none;
     }
   }
+  &__dropdown {
+    position: relative;
+    &:hover {
+      background-color: $green;
+      color: white;
+      text-decoration: none;
+    }
+    &:hover .navbar-lps__content {
+      display: block;
+    }
+    #{ $self }__content{
+      background-color: $green;
+      display: none;
+      position: absolute;
+      width: 250px;
+      #{ $self }__sublink {
+        color: white;
+        cursor: pointer;
+        line-height: 50px;
+        padding-left: 20px;
+        display: block;
+        &:hover {
+          height: 100%;
+          width: 100%;
+          text-decoration: none;
+          background-color: $hover-green-color
+        }
+      }
+    }
+  }
+}
+
+#toggle {
+  display: none;
+}
+
+// navbar for mobile
+.navbar-lps-mobile {
+  $self: &;
   &__menu {
     color: white;
     padding: 0 10px;
@@ -40,8 +93,8 @@
         height: 2px;
         margin-top: 7px;
         background-color: white;
-        -webkit-transition: all 0.5s ease-in-out;
-                transition: all 0.5s ease-in-out;
+        -webkit-transition: all .5s ease-in-out;
+                transition: all .5s ease-in-out;
       }
     }
     #{ $self }__wrapper{
@@ -50,54 +103,77 @@
       left: 0;
       right: 0;
       bottom: 0;
+      height: 0;
       overflow: hidden;
       z-index: 100;
-      -webkit-transition: all 0.5s ease-in-out;
-              transition: all 0.5s ease-in-out;
+      -webkit-transition: all .5s ease-in-out;
+              transition: all .5s ease-in-out;
       #{ $self }__items {
         height: 100vh;
-        width: 100%;
+        width: 100vw;
         z-index: 500;
-        #{ $self }__link{
+        #{ $self }__mobilelink{
           color: white;
           font-size: 18px;
           width: 100%;
-          margin-top: 15px;
-          &:first-child {
-            margin-top: 0;
+          line-height: 50px;
+          padding: 0 20px;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+        #{ $self }__dropdown {
+          position: relative;
+          &:hover {
+            background-color: $green;
+            color: white;
+            text-decoration: none;
+            padding-bottom: 15px;
+          }
+          &:hover .navbar-lps-mobile__content {
+            display: block;
+          }
+          #{ $self }__content{
+            background-color: $green;
+            display: none;
+            width: 100vw;
+            #{ $self }__sublink {
+              color: white;
+              line-height: 40px;
+              display: block;
+              &:hover {
+                height: 100%;
+                width: 100%;
+                text-decoration: none;
+                background-color: $hover-green-color
+              }
+            }
           }
         }
       }
     }
   }
-  &--white {
-    box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-    background-color: $dark-green;
-  }
-}
-
-#toggle {
-  display: none;
 }
 
 /* Hamburger Animation */
-#toggle:checked + .navbar-lps__hamburger {
-  .navbar-lps__top {
+#toggle:checked + .navbar-lps-mobile__hamburger {
+  .navbar-lps-mobile__top {
     margin-top: 22.5px;
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
   }
-  .navbar-lps__middle {
+  .navbar-lps-mobile__middle {
     margin-top: -2px;
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
   }
-  .navbar-lps__bottom {
+  .navbar-lps-mobile__bottom {
   -webkit-transform: scale(0);
           transform: scale(0);
   }
-  + .navbar-lps__wrapper {
+  + .navbar-lps-mobile__wrapper {
     top: 0;
+    height: 100vh;
     background-color: $dark-green;
   }
 }
