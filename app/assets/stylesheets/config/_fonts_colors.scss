@@ -20,6 +20,8 @@ $grey: #818181;
 $medium-grey: #494A4A;
 $dark-grey:  #2c2828;
 $dark-green: #395C56;
+$hover-green-color: lighten($green, 10%);
+
 
 h1 {
   font-family: $headers-font;
