@@ -1,0 +1,43 @@
+.footer-lps {
+  background-color: $dark-green;
+  height: 70px;
+  width: 100%;
+  padding: 0 30px;
+  @media (max-width: 767px) {
+     padding: 0 15px;
+  }
+  &__links a {
+    color: $dark-green;
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    margin: 0 5px;
+    font-size: 24px;
+    @media (max-width: 767px) {
+      font-size: 20px;
+      width: 45px;
+      height: 45px;
+      border-radius: 45px;
+    }
+    &:hover {
+      color: white;
+      background-color: $green;
+      box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+      text-decoration: none;
+    }
+  }
+  &__legalnotices {
+    a {
+      color: white;
+      opacity: 0.8;
+      cursor: pointer;
+      font-size: 12px;
+      &:hover {
+        color: white;
+        opacity: 1;
+        text-decoration: none;
+      }
+    }
+  }
+}
