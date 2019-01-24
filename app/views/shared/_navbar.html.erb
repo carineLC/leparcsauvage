@@ -31,18 +31,18 @@
       <div class="navbar-lps-mobile__wrapper">
         <div class="navbar-lps-mobile__items d-flex flex-column align-items-center justify-content-center text-center">
             <div class="navbar-lps-mobile__dropdown">
-              <%= link_to "Le parc +", "#", class: "navbar-lps-mobile__mobilelink" %>
-              <div class="navbar-lps-mobile__content">
+              <%= link_to "Le parc", "#collapseMenu", class: "navbar-lps-mobile__link dropdown-toggle", data: { toggle: "collapse" }, aria: { expanded: "false", controls: "collapseMenu" } %>
+              <div class="navbar-lps-mobile__content collapse" id="collapseMenu">
                 <%= link_to "La ferme pédagogique", "/", class: "navbar-lps-mobile__sublink" %>
                 <%= link_to "La fauconnerie", "#", class: "navbar-lps-mobile__sublink" %>
                 <%= link_to "Le parc de vision", "#", class: "navbar-lps-mobile__sublink" %>
                 <%= link_to "Le centre de sauvegarde", "#", class: "navbar-lps-mobile__sublink" %>
               </div>
             </div>
-            <%= link_to "Actualités", "#", class: "navbar-lps-mobile__mobilelink" %>
-            <%= link_to "L'équipe", "#", class: "navbar-lps-mobile__mobilelink" %>
-            <%= link_to "Partenariats", "#", class: "navbar-lps-mobile__mobilelink" %>
-            <%= link_to "Infos pratiques", "#", class: "navbar-lps-mobile__mobilelink" %>
+            <%= link_to "Actualités", "#", class: "navbar-lps-mobile__link" %>
+            <%= link_to "L'équipe", "#", class: "navbar-lps-mobile__link" %>
+            <%= link_to "Partenariats", "#", class: "navbar-lps-mobile__link" %>
+            <%= link_to "Infos pratiques", "#", class: "navbar-lps-mobile__link" %>
         </div>
       </div>
     </div>
