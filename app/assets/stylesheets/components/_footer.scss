@@ -3,6 +3,8 @@
   height: 4.5rem;
   width: 100%;
   padding: 0 2rem;
+  position: absolute;
+  bottom: 0;
   &__links a {
     color: $dark-green;
     background-color: white;
