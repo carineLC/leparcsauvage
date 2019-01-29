@@ -1,7 +1,6 @@
  // Main navbar
 .navbar-lps {
   $self: &;
-  height: 4.5rem;
   width: 100%;
   padding: 0 2rem;
   position: fixed;
@@ -9,6 +8,9 @@
   background: $dark-green;
   z-index: 500;
   transition: all 0.3s ease;
+  &--height {
+    height: 4.5rem;
+  }
   &__logo img {
     position: absolute;
     top: 0;
