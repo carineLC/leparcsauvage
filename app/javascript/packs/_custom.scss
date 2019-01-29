@@ -1,1 +1,3 @@
-// In case we need to overide bootstrap variables.
+.dropdown-toggle::after {
+  vertical-align: 0.125em;
+}
