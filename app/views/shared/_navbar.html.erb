@@ -1,50 +1,53 @@
-<div class="navbar-lps d-flex align-items-center justify-content-between <%= yield(:navbar_lps_class) %>">
-  <a href="/" class="navbar-lps__logo">
-    <%= image_tag "logo.png" %>
-  </a>
-  <div class="d-none d-md-block">
-    <div class="d-flex align-items-center justify-content-between">
-      <div class="navbar-lps__dropdown">
-        <%= link_to "Le parc", "#", class: "navbar-lps__link d-flex align-items-center" %>
-        <div class="navbar-lps__content">
-          <%= link_to "La ferme pédagogique", "#", class: "navbar-lps__sublink" %>
-          <%= link_to "La fauconnerie", "#", class: "navbar-lps__sublink" %>
-          <%= link_to "Le parc de vision", "#", class: "navbar-lps__sublink" %>
-          <%= link_to "Le centre de sauvegarde", "#", class: "navbar-lps__sublink" %>
+<header>
+  <div class="navbar-lps navbar-lps--height d-flex align-items-center justify-content-between <%= yield(:navbar_lps_class) %>">
+    <a href="/" class="navbar-lps__logo">
+      <%= image_tag "logo.png" %>
+    </a>
+    <div class="d-none d-md-block">
+      <div class="d-flex align-items-center justify-content-between">
+        <div class="navbar-lps__dropdown">
+          <%= link_to "Le parc", "#", class: "navbar-lps__link d-flex align-items-center" %>
+          <div class="navbar-lps__content">
+            <%= link_to "La ferme pédagogique", "#", class: "navbar-lps__sublink" %>
+            <%= link_to "La fauconnerie", "#", class: "navbar-lps__sublink" %>
+            <%= link_to "Le parc de vision", "#", class: "navbar-lps__sublink" %>
+            <%= link_to "Le centre de sauvegarde", "#", class: "navbar-lps__sublink" %>
+          </div>
         </div>
+        <%= link_to "Actualités", "#", class: "navbar-lps__link d-flex align-items-center" %>
+        <%= link_to "L'équipe", "#", class: "navbar-lps__link d-flex align-items-center" %>
+        <%= link_to "Partenariats", "#", class: "navbar-lps__link d-flex align-items-center" %>
+        <%= link_to "Infos pratiques", "#", class: "navbar-lps__link d-flex align-items-center" %>
       </div>
-      <%= link_to "Actualités", "#", class: "navbar-lps__link d-flex align-items-center" %>
-      <%= link_to "L'équipe", "#", class: "navbar-lps__link d-flex align-items-center" %>
-      <%= link_to "Partenariats", "#", class: "navbar-lps__link d-flex align-items-center" %>
-      <%= link_to "Infos pratiques", "#", class: "navbar-lps__link d-flex align-items-center" %>
     </div>
-  </div>
-  <div class="d-block d-md-none">
-    <div class="navbar-lps-mobile__menu">
-      <input id="toggle" type="checkbox"/>
-      <label class="navbar-lps-mobile__hamburger" for="toggle">
-        <div class="navbar-lps-mobile__top"></div>
-        <div class="navbar-lps-mobile__middle"></div>
-        <div class="navbar-lps-mobile__bottom"></div>
-      </label>
+    <div class="d-block d-md-none">
+      <div class="navbar-lps-mobile__menu">
+        <input id="toggle" type="checkbox"/>
+        <label class="navbar-lps-mobile__hamburger" for="toggle">
+          <div class="navbar-lps-mobile__top"></div>
+          <div class="navbar-lps-mobile__middle"></div>
+          <div class="navbar-lps-mobile__bottom"></div>
+        </label>
 
-      <div class="navbar-lps-mobile__wrapper">
-        <div class="navbar-lps-mobile__items d-flex flex-column align-items-center justify-content-center text-center">
-            <div class="navbar-lps-mobile__dropdown">
-              <%= link_to "Le parc", "#collapseMenu", class: "navbar-lps-mobile__link dropdown-toggle", data: { toggle: "collapse" }, aria: { expanded: "false", controls: "collapseMenu" } %>
-              <div class="navbar-lps-mobile__content collapse" id="collapseMenu">
-                <%= link_to "La ferme pédagogique", "/", class: "navbar-lps-mobile__sublink" %>
-                <%= link_to "La fauconnerie", "#", class: "navbar-lps-mobile__sublink" %>
-                <%= link_to "Le parc de vision", "#", class: "navbar-lps-mobile__sublink" %>
-                <%= link_to "Le centre de sauvegarde", "#", class: "navbar-lps-mobile__sublink" %>
+        <div class="navbar-lps-mobile__wrapper">
+          <div class="navbar-lps-mobile__items d-flex flex-column align-items-center justify-content-center text-center">
+              <div class="navbar-lps-mobile__dropdown">
+                <%= link_to "Le parc", "#collapseMenu", class: "navbar-lps-mobile__link dropdown-toggle", data: { toggle: "collapse" }, aria: { expanded: "false", controls: "collapseMenu" } %>
+                <div class="navbar-lps-mobile__content collapse" id="collapseMenu">
+                  <%= link_to "La ferme pédagogique", "/", class: "navbar-lps-mobile__sublink" %>
+                  <%= link_to "La fauconnerie", "#", class: "navbar-lps-mobile__sublink" %>
+                  <%= link_to "Le parc de vision", "#", class: "navbar-lps-mobile__sublink" %>
+                  <%= link_to "Le centre de sauvegarde", "#", class: "navbar-lps-mobile__sublink" %>
+                </div>
               </div>
-            </div>
-            <%= link_to "Actualités", "#", class: "navbar-lps-mobile__link" %>
-            <%= link_to "L'équipe", "#", class: "navbar-lps-mobile__link" %>
-            <%= link_to "Partenariats", "#", class: "navbar-lps-mobile__link" %>
-            <%= link_to "Infos pratiques", "#", class: "navbar-lps-mobile__link" %>
+              <%= link_to "Actualités", "#", class: "navbar-lps-mobile__link" %>
+              <%= link_to "L'équipe", "#", class: "navbar-lps-mobile__link" %>
+              <%= link_to "Partenariats", "#", class: "navbar-lps-mobile__link" %>
+              <%= link_to "Infos pratiques", "#", class: "navbar-lps-mobile__link" %>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</header>
+<div class="navbar-lps--height <%= yield(:div_below_navbar_lps_class) %>"></div>
