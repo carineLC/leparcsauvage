@@ -1,14 +1,10 @@
-def authenticate_admin!
-  redirect_to new_user_session_path unless current_user && current_user.admin
-end
-
 ActiveAdmin.setup do |config|
   # == Site Title
   #
   # Set the title that is displayed on the main layout
   # for each of the active admin pages.
   #
-  config.site_title = "Leparcsauvage"
+  config.site_title = "Le parc sauvage"
 
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
@@ -58,7 +54,7 @@ ActiveAdmin.setup do |config|
   #
   # This setting changes the method which Active Admin calls
   # within the application controller.
-  config.authentication_method = :authenticate_admin!
+  config.authentication_method = :authenticate_admin_user!
 
   # == User Authorization
   #
@@ -138,7 +134,7 @@ ActiveAdmin.setup do |config|
   # config.comments_order = 'created_at ASC'
   #
   # You can disable the menu item for the comments index page:
-  # config.comments_menu = false
+  config.comments_menu = false
   #
   # You can customize the comment menu:
   # config.comments_menu = { parent: 'Admin', priority: 1 }
@@ -147,7 +143,7 @@ ActiveAdmin.setup do |config|
   #
   # Enable and disable Batch Actions
   #
-  config.batch_actions = true
+  config.batch_actions = false
 
   # == Controller Filters
   #
@@ -215,7 +211,7 @@ ActiveAdmin.setup do |config|
   #   config.register_stylesheet 'my_print_stylesheet.css', media: :print
   #
   # To load a javascript file:
-    config.register_javascript 'ckeditor/init.js'
+  config.register_javascript 'ckeditor/init.js'
 
   # == CSV options
   #
