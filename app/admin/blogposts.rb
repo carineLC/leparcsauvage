@@ -36,7 +36,7 @@ ActiveAdmin.register Blogpost do
         raw(blogpost.description)
       end
       row :photo do |blogpost|
-        image_tag blogpost.photo.url if blogpost.photo.present?
+        image_tag blogpost.photo.url
       end
     end
   end
