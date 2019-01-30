@@ -19,3 +19,38 @@
   width: 79.5% !important;
   overflow: hidden;
 }
+
+.active_admin {
+  th {
+    padding-right: 1rem;
+  }
+  img {
+    max-width: 200px;
+  }
+  button {
+    margin-left: 20px;
+  }
+  a {
+    &.edit_link,
+    &.delete_link {
+      margin-top: 5px;
+
+    }
+  }
+  .index_total {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  @media(min-width:767px) {
+    #filters_sidebar_section {
+      margin-top: 48px;
+    }
+  }
+  #sidebar {
+    margin-top: 0px !important;
+  }
+  #user_password_input
+    abbr {
+      display: none;
+    }
+}
