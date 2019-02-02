@@ -1,27 +1,30 @@
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!
 
-  def accueil
+  def home
   end
 
-  def ferme_pedagogique
+  def pedagogical_farm
   end
 
-  def fauconnerie
+  def falconry
   end
 
-  def parc_de_vision
+  def vision_park
   end
 
-  def centre_de_sauvegarde
+  def backup_center
   end
 
-  def equipe
+  def team
   end
 
-  def partenariats
+  def partnerships
   end
 
-  def infos_pratiques
+  def practical_infos
+  end
+
+  def legal_notices
   end
 end
