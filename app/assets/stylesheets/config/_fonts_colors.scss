@@ -6,8 +6,9 @@ $body-font: 'Playfair Display', serif;
 $headers-font: 'Open Sans Condensed', sans-serif;
 $sub-headers-font: 'Oswald', sans-serif;
 
-$font-size-base: 1rem;
+$font-size-base: 0.85rem;
 $font-size-title: 2rem;
+$font-size-subtitle: 1.5rem;
 $font-size-link: 0.9rem;
 
 $red: #EE5F5B;
@@ -24,16 +25,17 @@ $hover-green-color: lighten($green, 10%);
 
 
 h1 {
-  font-family: $headers-font;
-  color: $medium-grey;
-  font-size: $font-size-title;
-  letter-spacing: 2px;
+  font-family: $headers-font !important;
+  color: $medium-grey !important;
+  font-size: $font-size-title !important;
+  letter-spacing: 2px !important;
 }
 h2 {
-  font-family: $sub-headers-font;
-  color: $grey;
-  font-size: $font-size-title;
-  letter-spacing: 2px;
+  font-family: $sub-headers-font !important;
+  color: $grey !important;
+  font-size: $font-size-subtitle !important;
+  letter-spacing: 2px !important;
+  font-weight: 200 !important;
 }
 p {
   font-family: $body-font;

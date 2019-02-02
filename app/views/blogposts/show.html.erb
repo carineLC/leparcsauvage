@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="title-lps text-center">
+    <h1><%= @blogpost.title %></h1>
+  </div>
+
+  <div class="row">
+    <div class="col mt-3 mb-5">
+      <div class="text-center">
+        <%= cl_image_tag @blogpost.photo, class:"blogpost-photo-lps"%>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col text-center">
+      <p> <%= @blogpost.description.html_safe %> </p>
+      <p><em> Publié le <%= @blogpost.created_at.strftime("%d/%m/%Y") %> </em></p>
+    </div>
+  </div>
+</div>

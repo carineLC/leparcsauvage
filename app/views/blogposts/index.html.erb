@@ -1,4 +1,42 @@
-<% @blogposts.each do |post| %>
-  <%= post.title %>
-  <%= cl_image_tag post.photo %>
-<% end %>
+<div class="container">
+  <div class="title-lps text-center">
+    <h1>Les actualités du Parc Sauvage</h1>
+  </div>
+
+  <% @blogposts.each do |blogpost| %>
+
+    <div class="card-blogpost">
+
+      <div class="card-blogpost-title text-center text-lg-left">
+        <h2> <%= blogpost.title %> </h2>
+      </div>
+
+      <div class="row">
+
+        <div class="col-xs-12 col-lg-6">
+          <div class="card-blogpost-image">
+            <div class="text-center">
+              <%= cl_image_tag blogpost.photo, class: "float-lg-left"%>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-lg-6">
+          <div class="card-blogpost-description text-center text-lg-left">
+            <p> <%= blogpost.description.truncate(800, separator: ' ').html_safe %> </p>
+            <p><em> Publié le <%= blogpost.created_at.strftime("%d/%m/%Y") %> </em></p>
+          </div>
+          <div class="text-center text-lg-left">
+            <%= link_to "Lire la suite", blogpost_path(blogpost), class: "button button-transparent" %>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="card-blogpost-lign">
+      </div>
+
+    </div>
+  <% end %>
+</div>
+
