@@ -1,0 +1,36 @@
+.container {
+  padding-bottom: 3rem;
+}
+
+.title-lps {
+  margin: 1.5rem;
+}
+
+.card-blogpost {
+  margin-bottom: 0 2rem;
+  margin-top: 2rem;
+}
+
+.card-blogpost-title {
+  margin: 2rem;
+}
+
+.card-image img {
+  border-radius: 4px;
+  max-width: 100%;
+}
+
+.card-description {
+  margin: 1rem 0.5rem 1rem 0.5rem;
+}
+
+.card-lign {
+  border-bottom: solid 1px $medium-grey;
+  opacity: 0.4;
+  margin: 2rem 10rem;
+}
+
+.blogpost-photo-lps {
+  max-height: 400px;
+  border-radius: 4px;
+}

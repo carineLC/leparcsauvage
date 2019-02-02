@@ -6,5 +6,12 @@ class BlogpostsController < ApplicationController
   end
 
   def show
+    @blogpost = Blogpost.find(params[:id])
+  end
+
+  private
+
+  def blogpost_params
+    params.require(:blogpost).permit(:id, :title, :description, :photo)
   end
 end
