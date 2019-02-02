@@ -2,15 +2,16 @@ Rails.application.routes.draw do
   devise_for :users, skip: [:registrations]
   ActiveAdmin.routes(self)
 
-  root to: 'pages#accueil'
+  root to: 'pages#home'
 
-  resources :blogposts, path: 'vie-du-parc'
+  resources :blogposts, only: [:show, :index], path: 'vie-du-parc'
 
-  get "ferme-pedagogique", to: 'pages#ferme_pedagogique'
-  get "fauconnerie", to: 'pages#fauconnerie'
-  get "parc-de-vision", to: 'pages#parc_de_vision'
-  get "centre-de-sauvegarde", to: 'pages#centre_de_sauvegarde'
-  get "equipe", to: 'pages#equipe'
-  get "partenariats", to: 'pages#partenariats'
-  get "infos-pratiques", to: 'pages#infos_pratiques'
+  get 'ferme_pedagogique', to: 'pages#pedagogical_farm', as: :pedagogical_farm
+  get 'fauconnerie', to: 'pages#falconry', as: :falconry
+  get 'parc_de_vision', to: 'pages#vision_park', as: :vision_park
+  get 'centre_de_sauvegarde', to: 'pages#backup_center', as: :backup_center
+  get 'equipe', to: 'pages#team', as: :team
+  get 'partenariats', to: 'pages#partnerships', as: :partnerships
+  get 'infos-pratiques', to: 'pages#practical_infos', as: :practical_infos
+  get 'mentions-legales', to: 'pages#legal_notices', as: :legal_notices
 end
