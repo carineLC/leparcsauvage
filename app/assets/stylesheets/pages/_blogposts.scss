@@ -1,9 +1,5 @@
-.container {
-  padding-bottom: 3rem;
-}
-
 .title-lps {
-  margin: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .card-blogpost {
@@ -15,16 +11,16 @@
   margin: 2rem;
 }
 
-.card-image img {
+.card-blogpost-image img {
   border-radius: 4px;
   max-width: 100%;
 }
 
-.card-description {
+.card-blogpost-description {
   margin: 1rem 0.5rem 1rem 0.5rem;
 }
 
-.card-lign {
+.card-blogpost-lign {
   border-bottom: solid 1px $medium-grey;
   opacity: 0.4;
   margin: 2rem 10rem;

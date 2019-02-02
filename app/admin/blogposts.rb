@@ -24,7 +24,7 @@ ActiveAdmin.register Blogpost do
     div "Total: #{pluralize(collection.count, 'blogpost')}", class: "index_total"
     column :title
     column :description do |blogpost|
-      raw(blogpost.description.truncate(120))
+      raw(blogpost.description.truncate(120, separator: ' '))
     end
     actions
   end

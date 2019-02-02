@@ -16,7 +16,7 @@
         <div class="row">
 
           <div class="col-xs-12 col-lg-6">
-            <div class="card-image">
+            <div class="card-blogpost-image">
               <div class="text-center">
                 <%= cl_image_tag blogpost.photo, class: "float-lg-left"%>
               </div>
@@ -24,8 +24,9 @@
           </div>
 
           <div class="col-xs-12 col-lg-6">
-            <div class="card-description text-center text-lg-left">
-              <p> <%= blogpost.description[0..400] %>... </p>
+            <div class="card-blogpost-description text-center text-lg-left">
+              <p> <%= blogpost.description.truncate(800, separator: ' ').html_safe %> </p>
+              <p><em> Publié le <%= blogpost.created_at.strftime("%d/%m/%Y") %> </em></p>
             </div>
             <div class="text-center text-lg-left">
               <%= link_to "Lire la suite", blogpost_path(blogpost), class: "button button-transparent" %>
@@ -34,7 +35,7 @@
 
         </div>
 
-        <div class="card-lign">
+        <div class="card-blogpost-lign">
         </div>
 
       </div>

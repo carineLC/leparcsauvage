@@ -13,7 +13,8 @@
 
   <div class="row">
     <div class="col text-center">
-      <p> <%= @blogpost.description %> </p>
+      <p> <%= @blogpost.description.html_safe %> </p>
+      <p><em> Publié le <%= @blogpost.created_at.strftime("%d/%m/%Y") %> </em></p>
     </div>
   </div>
 </div>
