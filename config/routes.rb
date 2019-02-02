@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
 
-  resources :blogposts, only: [:show, :index], path: 'vie-du-parc'
+  resources :blogposts, only: %i[show index], path: 'vie-du-parc'
 
   get 'ferme_pedagogique', to: 'pages#pedagogical_farm', as: :pedagogical_farm
   get 'fauconnerie', to: 'pages#falconry', as: :falconry
