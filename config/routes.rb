@@ -12,6 +12,6 @@ Rails.application.routes.draw do
   get 'centre_de_sauvegarde', to: 'pages#backup_center', as: :backup_center
   get 'equipe', to: 'pages#team', as: :team
   get 'partenariats', to: 'pages#partnerships', as: :partnerships
-  get 'infos-pratiques', to: 'pages#practical_infos', as: :practical_infos
-  get 'mentions-legales', to: 'pages#legal_notices', as: :legal_notices
+  get 'infos_pratiques', to: 'pages#practical_infos', as: :practical_infos
+  get 'mentions_legales', to: 'pages#legal_notices', as: :legal_notices
 end
