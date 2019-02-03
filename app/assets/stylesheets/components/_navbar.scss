@@ -5,7 +5,7 @@
   position: fixed;
   top: 0;
   background: $dark-green;
-  box-shadow: 0 2px 15px rgba($grey, 0.4);
+  box-shadow: 0 2px 6px rgba($grey, 0.4);;
   z-index: 500;
   transition: all 0.3s ease;
   &--height {
@@ -22,7 +22,7 @@
     box-shadow: none;
   }
   &--green {
-    box-shadow: 0 2px 15px rgba($grey, 0.4);
+    box-shadow: 0 2px 6px rgba($grey, 0.4);;
     background-color: $dark-green;
   }
 }
