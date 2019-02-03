@@ -1,3 +1,8 @@
+<% content_for :meta_title, "Le Parc Sauvage - #{@blogpost.title}" %>
+<% content_for :meta_description, sanitize(@blogpost.description) %>
+<% content_for :meta_image, cl_image_path(@blogpost.photo) %>
+
+
 <div class="container">
   <div class="title-lps text-center">
     <h1><%= @blogpost.title %></h1>
