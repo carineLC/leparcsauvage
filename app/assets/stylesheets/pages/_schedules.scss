@@ -1,0 +1,19 @@
+.schedules {
+  $self: &;
+  &--width {
+  max-width: 43.75rem !important;
+  margin: 3rem;
+  }
+  &--row {
+    padding: 2.25rem 0;
+    background-color: $light-grey-49;
+    p {
+      font-size: 1rem !important;
+      margin: 0;
+    }
+    &--grey {
+      @extend #{ $self }--row;
+      background-color: $light-grey;
+    }
+  }
+}
