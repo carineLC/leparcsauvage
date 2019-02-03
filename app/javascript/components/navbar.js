@@ -14,14 +14,37 @@ const initUpdateNavbarOnScroll = () => {
 const hideSublinksOnClickHamburger = () => {
   const navbarMobileHamburger = document.querySelector(".navbar-lps-mobile__hamburger");
   const navbarMobileLink = document.querySelector(".navbar-lps-mobile__link");
-  const navbarMobileSubLinks = document.getElementById("collapseMenu");
+  const navbarMobileSubLinksPark = document.getElementById("collapseMenuPark");
+  const navbarMobileSubLinksInfos = document.getElementById("collapseMenuInfos");
   navbarMobileHamburger.addEventListener("click", (event) => {
-    if (navbarMobileSubLinks.classList.contains("show")) {
-      navbarMobileSubLinks.classList.remove("show");
+    if (navbarMobileSubLinksPark.classList.contains("show")) {
+      navbarMobileSubLinksPark.classList.remove("show");
+      navbarMobileLink.classList.add("collapsed");
+      navbarMobileLink.setAttribute('aria-expanded', false);
+    }
+    if (navbarMobileSubLinksInfos.classList.contains("show")) {
+      navbarMobileSubLinksInfos.classList.remove("show");
       navbarMobileLink.classList.add("collapsed");
       navbarMobileLink.setAttribute('aria-expanded', false);
     }
   });
 }
 
-export { initUpdateNavbarOnScroll, hideSublinksOnClickHamburger };
+const hideSublinks = () => {
+  const navbarMobileLinkPark = document.getElementById("link_park");
+  const navbarMobileLinkInfos = document.getElementById("link_infos");
+  const navbarMobileSubLinksPark = document.getElementById("collapseMenuPark");
+  const navbarMobileSubLinksInfos = document.getElementById("collapseMenuInfos");
+  navbarMobileLinkPark.addEventListener("click", (event) => {
+    if (navbarMobileSubLinksInfos.classList.contains("show")) {
+      navbarMobileSubLinksInfos.classList.remove("show");
+    }
+  });
+  navbarMobileLinkInfos.addEventListener("click", (event) => {
+    if (navbarMobileSubLinksPark.classList.contains("show")) {
+      navbarMobileSubLinksPark.classList.remove("show");
+    }
+  });
+}
+
+export { initUpdateNavbarOnScroll, hideSublinksOnClickHamburger, hideSublinks };
