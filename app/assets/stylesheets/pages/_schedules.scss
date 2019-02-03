@@ -4,7 +4,7 @@
   max-width: 43.75rem !important;
   margin: 3rem;
   }
-  &--row {
+  &__row {
     padding: 2.25rem 0;
     background-color: $light-grey-49;
     p {
@@ -12,7 +12,7 @@
       margin: 0;
     }
     &--grey {
-      @extend #{ $self }--row;
+      @extend #{ $self }__row;
       background-color: $light-grey;
     }
   }
