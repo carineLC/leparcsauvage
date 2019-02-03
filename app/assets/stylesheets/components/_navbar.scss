@@ -5,6 +5,7 @@
   position: fixed;
   top: 0;
   background: $dark-green;
+  box-shadow: 0 2px 15px rgba($grey, 0.4);
   z-index: 500;
   transition: all 0.3s ease;
   &--height {
@@ -17,10 +18,11 @@
     z-index: 500;
   }
   &--transparent {
-    background: transparent
+    background: transparent;
+    box-shadow: none;
   }
-  &--white {
-    box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+  &--green {
+    box-shadow: 0 2px 15px rgba($grey, 0.4);
     background-color: $dark-green;
   }
 }
