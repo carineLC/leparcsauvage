@@ -1,6 +1,5 @@
  // Main navbar
 .navbar-lps {
-  $self: &;
   width: 100%;
   padding: 0 2rem;
   position: fixed;
@@ -10,7 +9,6 @@
   transition: all 0.3s ease;
   &--height {
     height: 4.5rem;
-    margin-bottom: 3rem;
   }
   &__logo img {
     position: absolute;
@@ -34,11 +32,17 @@
     color: white;
     line-height: 4.5rem;
     padding: 0 1rem;
+    @media (max-width: 991.98px) {
+      padding: 0 0.6rem;
+    }
     cursor: pointer;
     &:hover {
       background-color: $green;
       color: white;
       text-decoration: none;
+    }
+    &:not([href]):not([tabindex]) {
+      color: white;
     }
   }
   &__dropdown {
@@ -51,11 +55,15 @@
     &:hover .navbar-lps__content {
       display: block;
     }
-    #{ $self }__content{
+    #{ $self }__content {
       background-color: $green;
       display: none;
       position: absolute;
       width: 15.5rem;
+      &--left {
+        @extend #{ $self }__content;
+        left: -90px;
+      }
       #{ $self }__sublink {
         color: white;
         cursor: pointer;
@@ -66,7 +74,7 @@
           height: 100%;
           width: 100%;
           text-decoration: none;
-          background-color: $hover-green-color
+          background-color: $light-green-10;
         }
       }
     }
@@ -132,7 +140,7 @@
                 height: 100%;
                 width: 100%;
                 text-decoration: none;
-                background-color: $hover-green-color
+                background-color: $light-green-10;
               }
             }
           }
