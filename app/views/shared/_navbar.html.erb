@@ -6,7 +6,7 @@
     <div class="d-none d-md-block">
       <div class="d-flex align-items-center justify-content-between">
         <div class="navbar-lps__dropdown">
-          <%= link_to "Le parc", "#", class: "navbar-lps__link d-flex align-items-center" %>
+          <%= content_tag "a", "Le parc", class: "navbar-lps__link d-flex align-items-center" %>
           <div class="navbar-lps__content">
             <%= link_to "La ferme pédagogique", "#", class: "navbar-lps__sublink" %>
             <%= link_to "La fauconnerie", "#", class: "navbar-lps__sublink" %>
@@ -17,7 +17,14 @@
         <%= link_to "Actualités", blogposts_path, class: "navbar-lps__link d-flex align-items-center" %>
         <%= link_to "L'équipe", "#", class: "navbar-lps__link d-flex align-items-center" %>
         <%= link_to "Partenariats", "#", class: "navbar-lps__link d-flex align-items-center" %>
-        <%= link_to "Infos pratiques", "#", class: "navbar-lps__link d-flex align-items-center" %>
+        <div class="navbar-lps__dropdown">
+          <%= content_tag "a", "Infos pratiques", class: "navbar-lps__link d-flex align-items-center" %>
+            <div class="navbar-lps__content--left">
+              <%= link_to "Horaires", schedules_path, class: "navbar-lps__sublink" %>
+              <%= link_to "Tarifs", prices_path, class: "navbar-lps__sublink" %>
+              <%= link_to "Accès", access_path, class: "navbar-lps__sublink" %>
+            </div>
+          </div>
       </div>
     </div>
     <div class="d-block d-md-none">
@@ -32,8 +39,8 @@
         <div class="navbar-lps-mobile__wrapper">
           <div class="navbar-lps-mobile__items d-flex flex-column align-items-center justify-content-center text-center">
               <div class="navbar-lps-mobile__dropdown">
-                <%= link_to "Le parc", "#collapseMenu", class: "navbar-lps-mobile__link dropdown-toggle", data: { toggle: "collapse" }, aria: { expanded: "false", controls: "collapseMenu" } %>
-                <div class="navbar-lps-mobile__content collapse" id="collapseMenu">
+                <%= link_to "Le parc", "#collapseMenuPark", class: "navbar-lps-mobile__link dropdown-toggle", data: { toggle: "collapse" }, aria: { expanded: "false", controls: "collapseMenuPark" } %>
+                <div class="navbar-lps-mobile__content collapse" id="collapseMenuPark">
                   <%= link_to "La ferme pédagogique", "/", class: "navbar-lps-mobile__sublink" %>
                   <%= link_to "La fauconnerie", "#", class: "navbar-lps-mobile__sublink" %>
                   <%= link_to "Le parc de vision", "#", class: "navbar-lps-mobile__sublink" %>
@@ -43,7 +50,14 @@
               <%= link_to "Actualités", "#", class: "navbar-lps-mobile__link" %>
               <%= link_to "L'équipe", "#", class: "navbar-lps-mobile__link" %>
               <%= link_to "Partenariats", "#", class: "navbar-lps-mobile__link" %>
-              <%= link_to "Infos pratiques", "#", class: "navbar-lps-mobile__link" %>
+              <div class="navbar-lps-mobile__dropdown">
+                <%= link_to "Infos pratiques", "#collapseMenuInfos", class: "navbar-lps-mobile__link dropdown-toggle", data: { toggle: "collapse" }, aria: { expanded: "false", controls: "collapseMenuInfos" } %>
+                <div class="navbar-lps-mobile__content collapse" id="collapseMenuInfos">
+                  <%= link_to "Horaires", schedules_path, class: "navbar-lps-mobile__sublink" %>
+                  <%= link_to "Tarifs", prices_path, class: "navbar-lps-mobile__sublink" %>
+                  <%= link_to "Accès", access_path, class: "navbar-lps-mobile__sublink" %>
+                </div>
+              </div>
           </div>
         </div>
       </div>
