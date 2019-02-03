@@ -1,5 +1,8 @@
 .schedules {
   $self: &;
+  &--shadow {
+    box-shadow: 0 2px 15px rgba($grey, 0.3);
+  }
   &--width {
   max-width: 43.75rem !important;
   }
