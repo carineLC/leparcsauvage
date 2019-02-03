@@ -3,9 +3,9 @@ const initUpdateNavbarOnScroll = () => {
   if (navbar) {
     window.addEventListener('scroll', () => {
       if (window.scrollY >= window.innerHeight) {
-        navbar.classList.add('navbar-lps--white');
+        navbar.classList.add('navbar-lps--green');
       } else {
-        navbar.classList.remove('navbar-lps--white');
+        navbar.classList.remove('navbar-lps--green');
       }
     });
   }
