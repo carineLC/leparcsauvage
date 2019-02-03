@@ -1,3 +1,8 @@
+<% content_for :meta_title, "Le Parc Sauvage - #{@blogpost.title}" %>
+<% content_for :meta_description, sanitize(@blogpost.description) %>
+<% content_for :meta_image, cl_image_path(@blogpost.photo) %>
+
+
 <div class="container">
   <div class="title-lps text-center">
     <h1><%= @blogpost.title %></h1>
@@ -5,16 +10,15 @@
 
   <div class="row">
     <div class="col mt-3 mb-5">
-      <div class="text-center">
-        <%= cl_image_tag @blogpost.photo, class:"blogpost-photo-lps"%>
-      </div>
+      <%= cl_image_tag @blogpost.photo, class:"blogpost-photo-lps"%>
     </div>
   </div>
 
   <div class="row">
-    <div class="col text-center">
+    <div class="col text-justify">
       <p> <%= @blogpost.description.html_safe %> </p>
       <p><em> Publié le <%= @blogpost.created_at.strftime("%d/%m/%Y") %> </em></p>
+      <%= link_to "Retour à toutes les actualités", blogposts_path, class: "button button-transparent" %>
     </div>
   </div>
 </div>

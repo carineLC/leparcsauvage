@@ -11,24 +11,20 @@
         <h2> <%= blogpost.title %> </h2>
       </div>
 
-      <div class="row">
+      <div class="row h-100">
 
-        <div class="col-xs-12 col-lg-6">
+        <div class="col-xs-12 col-lg-6 my-auto">
           <div class="card-blogpost-image">
-            <div class="text-center">
-              <%= cl_image_tag blogpost.photo, class: "float-lg-left"%>
-            </div>
+            <%= cl_image_tag blogpost.photo %>
           </div>
         </div>
 
         <div class="col-xs-12 col-lg-6">
-          <div class="card-blogpost-description text-center text-lg-left">
-            <p> <%= blogpost.description.truncate(800, separator: ' ').html_safe %> </p>
+          <div class="card-blogpost-description text-justify">
+            <%= blogpost.description.truncate(600, separator: ' ').html_safe %>
             <p><em> Publié le <%= blogpost.created_at.strftime("%d/%m/%Y") %> </em></p>
           </div>
-          <div class="text-center text-lg-left">
-            <%= link_to "Lire la suite", blogpost_path(blogpost), class: "button button-transparent" %>
-          </div>
+          <%= link_to "Lire la suite", blogpost_path(blogpost), class: "button button-transparent" %>
         </div>
 
       </div>
