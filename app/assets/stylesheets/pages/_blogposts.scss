@@ -10,10 +10,13 @@
 .card-blogpost-image img {
   border-radius: 4px;
   max-width: 100%;
+  max-height: 20rem;
+  display: block;
+  margin: auto;
 }
 
 .card-blogpost-description {
-  margin: 1rem 0.5rem 1rem 0.5rem;
+ margin: 1rem 0.5rem;
 }
 
 .card-blogpost-lign {
@@ -23,6 +26,9 @@
 }
 
 .blogpost-photo-lps {
-  max-height: 25rem;
+  max-width: 100%;
+  max-height: 30rem;
   border-radius: 4px;
+  display: block;
+  margin: auto;
 }
