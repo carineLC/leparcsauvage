@@ -6,7 +6,7 @@ class BlogpostsController < ApplicationController
   end
 
   def show
-    @blogpost = Blogpost.find(params[:id])
+    @blogpost = Blogpost.friendly.find(params[:id])
   end
 
   private
