@@ -8,10 +8,10 @@
         <div class="navbar-lps__dropdown">
           <%= content_tag "a", "Le parc", class: "navbar-lps__link d-flex align-items-center" %>
           <div class="navbar-lps__content">
-            <%= link_to "La ferme pédagogique", "#", class: "navbar-lps__sublink" %>
-            <%= link_to "La fauconnerie", "#", class: "navbar-lps__sublink" %>
-            <%= link_to "Le parc de vision", "#", class: "navbar-lps__sublink" %>
-            <%= link_to "Le centre de sauvegarde", "#", class: "navbar-lps__sublink" %>
+            <%= link_to "La ferme pédagogique", pedagogical_farm_path, class: "navbar-lps__sublink" %>
+            <%= link_to "La fauconnerie", falconry_path, class: "navbar-lps__sublink" %>
+            <%= link_to "Le parc de vision", vision_park_path, class: "navbar-lps__sublink" %>
+            <%= link_to "Le centre de sauvegarde", backup_center_path, class: "navbar-lps__sublink" %>
           </div>
         </div>
         <%= link_to "Actualités", blogposts_path, class: "navbar-lps__link d-flex align-items-center" %>
@@ -41,13 +41,13 @@
               <div class="navbar-lps-mobile__dropdown">
                 <%= link_to "Le parc", "#collapseMenuPark", class: "navbar-lps-mobile__link dropdown-toggle", data: { toggle: "collapse" }, aria: { expanded: "false", controls: "collapseMenuPark" } %>
                 <div class="navbar-lps-mobile__content collapse" id="collapseMenuPark">
-                  <%= link_to "La ferme pédagogique", "/", class: "navbar-lps-mobile__sublink" %>
-                  <%= link_to "La fauconnerie", "#", class: "navbar-lps-mobile__sublink" %>
-                  <%= link_to "Le parc de vision", "#", class: "navbar-lps-mobile__sublink" %>
-                  <%= link_to "Le centre de sauvegarde", "#", class: "navbar-lps-mobile__sublink" %>
+                  <%= link_to "La ferme pédagogique", pedagogical_farm_path, class: "navbar-lps-mobile__sublink" %>
+                  <%= link_to "La fauconnerie", falconry_path, class: "navbar-lps-mobile__sublink" %>
+                  <%= link_to "Le parc de vision", vision_park_path, class: "navbar-lps-mobile__sublink" %>
+                  <%= link_to "Le centre de sauvegarde", backup_center_path, class: "navbar-lps-mobile__sublink" %>
                 </div>
               </div>
-              <%= link_to "Actualités", "#", class: "navbar-lps-mobile__link" %>
+              <%= link_to "Actualités", blogposts_path, class: "navbar-lps-mobile__link" %>
               <%= link_to "L'équipe", "#", class: "navbar-lps-mobile__link" %>
               <%= link_to "Partenariats", "#", class: "navbar-lps-mobile__link" %>
               <div class="navbar-lps-mobile__dropdown">
