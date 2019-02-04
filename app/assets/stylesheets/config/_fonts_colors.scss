@@ -15,14 +15,17 @@ $red: #EE5F5B;
 $blue: #469AE0;
 $yellow: #FDB631;
 $orange: #E67E22;
+
 $green: #74b49b;
-$light-gray: #F4F4F4;
+$light-green-10: lighten($green, 10%);
+$dark-green: #395C56;
+
 $grey: #818181;
+$light-grey-45: lighten($grey, 45%);
+$light-grey-49: lighten($grey, 49%);
+$light-grey: #F4F4F4;
 $medium-grey: #494A4A;
 $dark-grey:  #2c2828;
-$dark-green: #395C56;
-$hover-green-color: lighten($green, 10%);
-
 
 h1 {
   font-family: $headers-font !important;
