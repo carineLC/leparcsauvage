@@ -39,7 +39,7 @@
         <div class="navbar-lps-mobile__wrapper">
           <div class="navbar-lps-mobile__items d-flex flex-column align-items-center justify-content-center text-center">
               <div class="navbar-lps-mobile__dropdown">
-                <%= link_to "Le parc", "#collapseMenuPark", class: "navbar-lps-mobile__link dropdown-toggle", data: { toggle: "collapse" }, aria: { expanded: "false", controls: "collapseMenuPark" } %>
+                <%= link_to "Le parc", "#collapseMenuPark", class: "navbar-lps-mobile__link dropdown-toggle", id:"link_park", data: { toggle: "collapse" }, aria: { expanded: "false", controls: "collapseMenuPark" } %>
                 <div class="navbar-lps-mobile__content collapse" id="collapseMenuPark">
                   <%= link_to "La ferme pédagogique", pedagogical_farm_path, class: "navbar-lps-mobile__sublink" %>
                   <%= link_to "La fauconnerie", falconry_path, class: "navbar-lps-mobile__sublink" %>
@@ -51,7 +51,7 @@
               <%= link_to "L'équipe", team_path, class: "navbar-lps-mobile__link" %>
               <%= link_to "Partenariats", partnerships_path, class: "navbar-lps-mobile__link" %>
               <div class="navbar-lps-mobile__dropdown">
-                <%= link_to "Infos pratiques", "#collapseMenuInfos", class: "navbar-lps-mobile__link dropdown-toggle", data: { toggle: "collapse" }, aria: { expanded: "false", controls: "collapseMenuInfos" } %>
+                <%= link_to "Infos pratiques", "#collapseMenuInfos", class: "navbar-lps-mobile__link dropdown-toggle", id:"link_infos", data: { toggle: "collapse" }, aria: { expanded: "false", controls: "collapseMenuInfos" } %>
                 <div class="navbar-lps-mobile__content collapse" id="collapseMenuInfos">
                   <%= link_to "Horaires", schedules_path, class: "navbar-lps-mobile__sublink" %>
                   <%= link_to "Tarifs", prices_path, class: "navbar-lps-mobile__sublink" %>
