@@ -15,7 +15,9 @@
 
         <div class="col-xs-12 col-lg-6 my-auto">
           <div class="card-blogpost-image">
-            <%= cl_image_tag blogpost.photo %>
+            <%= link_to blogpost_path(blogpost) do %>
+              <%= cl_image_tag blogpost.photo %>
+            <% end %>
           </div>
         </div>
 
