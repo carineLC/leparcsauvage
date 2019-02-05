@@ -6,7 +6,18 @@
   padding-bottom: 4.5rem;
 }
 
-.title-lps {
+.main-title {
   margin-top: 3rem;
   margin-bottom: 2rem;
+}
+
+.main-lign {
+  border-bottom: solid 1px $medium-grey;
+  opacity: 0.4;
+}
+
+@media (max-width: 575.98px) {
+  .container {
+    padding: 0 2rem !important;
+  }
 }

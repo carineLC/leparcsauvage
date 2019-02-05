@@ -1,0 +1,13 @@
+.prices {
+  background-color: $light-grey;
+  padding: 2.5rem 1rem;
+  height: 100%;
+  box-shadow: 0 2px 6px rgba($grey, 0.3);
+  &__lign {
+    margin: 2rem 5rem;
+  }
+  p {
+    font-size: 1rem !important;
+    margin: 0;
+  }
+}

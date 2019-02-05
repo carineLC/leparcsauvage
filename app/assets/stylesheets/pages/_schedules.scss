@@ -1,11 +1,14 @@
 .schedules {
   $self: &;
+  &--shadow {
+    box-shadow: 0 2px 6px rgba($grey, 0.3);;
+  }
   &--width {
   max-width: 43.75rem !important;
   }
   &__row {
     padding: 2.25rem 0;
-    background-color: $light-grey-49;
+    background-color: rgba($light-grey, 0.3);
     p {
       font-size: 1rem !important;
       margin: 0;
