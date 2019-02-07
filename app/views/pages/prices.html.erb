@@ -1,12 +1,14 @@
 <% content_for :meta_title, "Le Parc Sauvage - Tarifs" %>
 <% content_for :meta_description, "Le Parc Sauvage - Tarifs" %>
 
-<div class="banner d-flex justify-content-center">
-  <%= image_tag "prices.jpg", alt: "photo renard", title: "photo renard", class: "banner__image"%>
-  <div class="banner__title text-center">
-    <h1>Les tarifs du Parc Sauvage</h1>
-  </div>
-</div>
+<%= render(
+  'shared/banner',
+  img: "prices.jpg",
+  img_alt: "photo tarifs",
+  img_title: "photo tarifs",
+  title: "Les tarifs du Parc Sauvage"
+)%>
+
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-lg-6 d-flex">
