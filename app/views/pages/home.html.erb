@@ -5,7 +5,58 @@
 
 </div>
 
-<% 100.times do  %>
-  <div><p>hello</p></div>
-<% end %>
+<div class="container container-cards-blogposts">
+  <div class="main-title text-center">
+    <h1>Les dernières actualités du Parc Sauvage</h1>
+  </div>
+  <div class="row">
+    <% @blogposts.first(4).each do |blogpost| %>
+      <div class="col-xs-12 col-sm-6 col-lg-3">
+        <div class="card">
+          <%= cl_image_tag blogpost.photo, class:"card-img-top"%>
+            <div class="card-body text-center">
+            <p class="text-center"><%= blogpost.title %></p>
+            <%= link_to "Lire la suite", blogpost_path(blogpost), class: "button button-transparent" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="row">
+    <div class="col text-center">
+      <br>
+      <%= link_to "Voir toutes les actualités", blogposts_path, class: "button button-green" %>
+    </div>
+  </div>
+</div>
+
+<div class="container pages-lps-container text-center">
+  <div class="main-title">
+    <h1>Le Parc Sauvage, qui sommes-nous ?</h1>
+  </div>
+  <p>
+    Venez découvrir l’univers des animaux dans cadre sauvage et sécurité au temps d’autrefois.
+    <br><br>
+    Si nous devions résumer l’univers du « Le Parc Sauvage », c’est la combinaison de la passion et de l’amour des animaux qui nous amené dans cette aventure.
+    Notre univers d’un peu plus de 15 hectares ouverts à tous, un univers unique en Nouvelle Aquitaine où se mêlent animaux de ferme, animaux de nos forets et volerie avec nos rapaces dans un monde moyenâgeux.
+    <br><br>
+    En 2019 seul la ferme pédagogique sera ouverte afin de continuer à préparer la suite pour vous accueillir dans les meilleures conditions.
+    N’hésitez pas a visiter nos pages sur es différents pole de zoo-parc
+  </p>
+</div>
+
+<div class="container">
+  <div class="text-center mt-5">
+    <p><em>Notre projet est soutenu par : </em></p>
+  </div>
+  <div class="row">
+    <div class="col">
+      <%= image_tag "logoUE.jpg", alt: "Union Européenne", title: "Union Européenne", class: "home-lps-images"%>
+    </div>
+    <div class="col">
+      <%= image_tag "logoNA.jpg", alt: "Nouvelle Aquitaine", title: "Nouvelle Aquitaine", class: "home-lps-images"%>
+    </div>
+  </div>
+</div>
 
