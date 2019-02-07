@@ -1,2 +1,44 @@
 <% content_for :meta_title, "Le Parc Sauvage - Accès" %>
 <% content_for :meta_description, "Le Parc Sauvage - Accès" %>
+
+<div class="banner d-flex justify-content-center">
+  <%= image_tag "access.jpg", alt: "photo rapace", title: "photo rapace", class: "banner__image"%>
+  <div class="banner__title text-center">
+    <h1>Accès au Parc Sauvage</h1>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-lg-6 d-flex">
+      <div class="grey-card text-center">
+        <p>
+          <strong>Adresse</strong>
+          <br>
+          <br>
+          Le Parc Sauvage
+          <br>
+          Lieu dit Le Claud
+          <br>
+          24320 La Tour Blanche Cercles
+        </p>
+        <div class="main-lign grey-card__lign"></div>
+        <p>
+          <strong>Téléphone</strong>
+          <br>
+          <br>
+           06 83 10 87 39
+        </p>
+        <div class="main-lign grey-card__lign"></div>
+        <p>
+          <strong>Email</strong>
+          <br>
+          <br>
+           <%= mail_to "contactflyprod@gmail.com", nil, class: "contact__mail"  %>
+         </p>
+      </div>
+    </div>
+    <div class="col-xs-12 col-lg-6 d-flex">
+      <div id="map" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+    </div>
+  </div>
+</div>
