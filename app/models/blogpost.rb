@@ -7,4 +7,8 @@ class Blogpost < ApplicationRecord
   validates :title, :description, :photo, presence: true
 
   mount_uploader :photo, PhotoUploader
+
+  def description_without_tags
+    self.description.gsub!(/<[^>]*>/, '')
+  end
 end
