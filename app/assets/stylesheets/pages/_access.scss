@@ -1,0 +1,7 @@
+.contact__mail {
+  color: $green;
+  &:hover {
+    text-decoration: none;
+    color: $light-green-10
+  }
+}
