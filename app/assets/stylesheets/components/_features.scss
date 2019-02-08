@@ -1,0 +1,37 @@
+.feature-card {
+  opacity: 0.8;
+  margin: 1rem;
+  &-img {
+    border: 5px $light-grey solid;
+    display: inline-block;
+    border-radius: 50%;
+    transform: translateY(0px);
+    animation: float 4s ease-in-out infinite;
+    margin: 0.5rem;
+    img {
+      width: 3.5rem;
+      height: 3.5rem;
+      object-fit: cover;
+      margin: 1rem;
+    }
+  }
+  &:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+}
+
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 15px 15px 0px rgba(0,0,0,0.2);
+    transform: translatey(-10px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+    transform: translatey(0px);
+  }
+}
