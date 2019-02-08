@@ -2,7 +2,7 @@ const initUpdateNavbarOnScroll = () => {
   const navbar = document.querySelector('.navbar-lps');
   if (navbar) {
     window.addEventListener('scroll', () => {
-      if (window.scrollY >= window.innerHeight) {
+      if (window.scrollY >= document.querySelector(".banner-home").offsetHeight - '70') {
         navbar.classList.add('navbar-lps--green');
       } else {
         navbar.classList.remove('navbar-lps--green');

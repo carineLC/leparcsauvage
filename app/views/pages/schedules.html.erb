@@ -1,12 +1,14 @@
 <% content_for :meta_title, "Le Parc Sauvage - Horaires" %>
 <% content_for :meta_description, "Le Parc Sauvage - Horaires" %>
 
-<div class="banner d-flex justify-content-center">
-  <%= image_tag "schedules.jpg", alt: "photo rapace", title: "photo rapace", class: "banner__image"%>
-  <div class="banner__title text-center">
-    <h1>Les horaires du Parc Sauvage</h1>
-  </div>
-</div>
+<%= render(
+  'shared/banner',
+  img: "schedules.jpg",
+  img_alt: "photo horaires",
+  img_title: "photo horaires",
+  title: "Les horaires du Parc Sauvage"
+) %>
+
 <div class="container schedules--width">
   <div class="schedules--shadow">
     <div class="row schedules__row--grey mx-auto align-items-center">
