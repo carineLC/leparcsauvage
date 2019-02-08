@@ -1,6 +1,16 @@
 .banner-home {
   background-image: image-url("banner-owl.png");
   background-size: cover;
+  color: white;
+  text-align: center;
+  height: 100vh;
+  background-size: cover !important;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 3px 0px 10px rgba(0,0,0,0.1);
+
 }
 
 .container-cards-blogposts {
