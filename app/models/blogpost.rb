@@ -9,6 +9,6 @@ class Blogpost < ApplicationRecord
   mount_uploader :photo, PhotoUploader
 
   def description_without_tags
-    self.description.gsub!(/<[^>]*>/, '')
+    description.gsub!(/<[^>]*>/, '')
   end
 end
