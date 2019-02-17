@@ -8,7 +8,7 @@
   <% @blogposts.each do |blogpost| %>
     <div class="card-blogpost">
       <div class="mb-4 text-center text-lg-left">
-        <h2> <%= blogpost.title %> </h2>
+        <h2><%= blogpost.title %></h2>
       </div>
       <div class="row">
         <div class="col-xs-12 col-lg-5">
@@ -19,7 +19,7 @@
         <div class="col-xs-12 col-lg-7">
           <div class="mt-4 text-justify">
             <%= blogpost.description.truncate(600, separator: ' ').html_safe %>
-            <p><em> Publié le <%= blogpost.created_at.strftime("%d/%m/%Y") %></em></p>
+            <p><em>Publié le <%= blogpost.created_at.strftime("%d/%m/%Y") %></em></p>
           </div>
           <%= link_to "Lire la suite", blogpost_path(blogpost), class: "button button-transparent" %>
         </div>
