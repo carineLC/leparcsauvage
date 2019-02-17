@@ -9,8 +9,9 @@ $sub-headers-font: 'Oswald', sans-serif;
 $font-size-base: 0.85rem;
 $font-size-title: 2rem;
 $font-size-subtitle: 1.5rem;
+$font-size-home-title: 1.2rem;
 $font-size-link: 0.9rem;
-$font-size-icon: 0.7rem;
+$font-size-icon: 1rem;
 
 $red: #EE5F5B;
 $blue: #469AE0;
@@ -51,6 +52,13 @@ h4 {
   font-size: $font-size-icon !important;
   font-weight: 200 !important;
 }
+h5 {
+  font-family: $sub-headers-font !important;
+  color: $light-grey !important;
+  font-size: $font-size-home-title !important;
+  font-weight: 200 !important;
+}
+
 p {
   font-family: $body-font;
   color: $dark-grey;
