@@ -7,13 +7,13 @@ const initMapbox = () => {
     const map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v10',
-      center: [0.426193, 45.359098],
+      center: [0.426193, 45.36406],
       attributionControl: false,
-      zoom: 7
+      zoom: 10
     });
     map.addControl(new mapboxgl.NavigationControl());
     new mapboxgl.Marker({ color: '#74b49b' })
-        .setLngLat([0.426193, 45.359098])
+        .setLngLat([0.426193, 45.36406])
         .addTo(map);
   }
 };
