@@ -10,8 +10,8 @@
   </div>
   <div class="row">
     <% @blogposts.first(4).each do |blogpost| %>
-      <div class="col-xs-12 col-sm-6 col-lg-3">
-        <div class="card shadow bg-white rounded">
+      <div class="col-xs-12 col-sm-6 col-lg-3 d-flex">
+        <div class="card shadow bg-white rounded mb-4 flex-fill">
           <%= cl_image_tag blogpost.photo, class:"card-img-top"%>
           <div class="card-body">
             <div class="card-text">
