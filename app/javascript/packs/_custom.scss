@@ -1,3 +1,14 @@
 .dropdown-toggle::after {
   vertical-align: 0.125em;
 }
+
+.card-img-top {
+  padding: 0.75rem;
+  border-radius: 0.85rem;
+  height: 10rem;
+  object-fit: cover;
+}
+
+.card-body, .card-title, .card-text {
+  text-align: center;
+}

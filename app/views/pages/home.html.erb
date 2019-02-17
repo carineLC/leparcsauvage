@@ -11,10 +11,12 @@
   <div class="row">
     <% @blogposts.first(4).each do |blogpost| %>
       <div class="col-xs-12 col-sm-6 col-lg-3">
-        <div class="card">
+        <div class="card shadow bg-white rounded">
           <%= cl_image_tag blogpost.photo, class:"card-img-top"%>
-          <div class="card-body text-center">
-            <p><%= blogpost.title %></p>
+          <div class="card-body">
+            <div class="card-text">
+              <p><%= blogpost.title %></p>
+            </div>
             <%= link_to "Lire la suite", blogpost_path(blogpost), class: "button button-transparent" %>
           </div>
         </div>
