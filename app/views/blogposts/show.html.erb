@@ -4,20 +4,18 @@
 
 
 <div class="container">
-  <div class="main-title text-center">
+  <div class="main-title">
     <h1><%= @blogpost.title %></h1>
   </div>
-
   <div class="row">
-    <div class="col mt-3 mb-5">
+    <div class="col mb-5">
       <%= cl_image_tag @blogpost.photo, class:"blogpost-photo-lps"%>
     </div>
   </div>
-
   <div class="row">
     <div class="col text-justify">
-      <p> <%= @blogpost.description.html_safe %> </p>
-      <p><em> Publié le <%= @blogpost.created_at.strftime("%d/%m/%Y") %> </em></p>
+      <p><%= @blogpost.description.html_safe %></p>
+      <p><em>Publié le <%= @blogpost.created_at.strftime("%d/%m/%Y") %></em></p>
       <%= link_to "Retour à toutes les actualités", blogposts_path, class: "button button-transparent" %>
     </div>
   </div>
