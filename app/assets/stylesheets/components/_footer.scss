@@ -20,7 +20,7 @@ footer {
     &:hover {
       color: white;
       background-color: $green;
-      box-shadow: 0 2px 6px rgba($grey, 0.3);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .15);
       text-decoration: none;
     }
   }
