@@ -1,0 +1,28 @@
+.team-card {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 150%;
+}
+
+.team-card-infos {
+  position: absolute;
+  bottom: 0;
+  background: white;
+  padding: 1rem;
+  color: white;
+}
+
+
+@media screen and (min-width: 768px) {
+  .team-card-infos {
+    transform: translateY(100%);
+    transition: ease 400ms all;
+  }
+  .team-card:hover {
+
+    .team-card-infos {
+      transform: translateY(0%);
+    }
+
+  }
+}
