@@ -10,12 +10,16 @@
   </div>
   <div class="row">
     <% @blogposts.first(4).each do |blogpost| %>
-      <div class="col-xs-12 col-sm-6 col-lg-3">
-        <div class="card">
+      <div class="col-xs-12 col-sm-6 col-lg-3 d-flex">
+        <div class="card shadow bg-white rounded mb-4 flex-fill">
           <%= cl_image_tag blogpost.photo, class:"card-img-top"%>
-          <div class="card-body text-center">
-            <p><%= blogpost.title %></p>
-            <%= link_to "Lire la suite", blogpost_path(blogpost), class: "button button-transparent" %>
+          <div class="card-body d-flex flex-column justify-content-between">
+            <div class="card-text">
+              <p><%= blogpost.title %></p>
+            </div>
+            <div>
+              <%= link_to "Lire la suite", blogpost_path(blogpost), class: "button button-transparent" %>
+            </div>
           </div>
         </div>
       </div>
@@ -23,13 +27,13 @@
   </div>
   <div class="row">
     <div class="col">
-      <div class="mt-4 text-center">
+      <div class="text-center">
         <%= link_to "Voir toutes les actualités", blogposts_path, class: "button button-green" %>
       </div>
     </div>
   </div>
 </div>
-<div class="container pages-lps-container text-center">
+<div class="container text-center">
   <div class="main-title">
     <h1>Le Parc Sauvage, qui sommes-nous ?</h1>
   </div>
@@ -45,7 +49,7 @@
 </div>
 <div class="container">
   <div class="text-center mt-4">
-    <p><em>Notre projet est soutenu par :</em></p>
+    <p>Notre projet est soutenu par :</p>
   </div>
   <div class="row">
     <div class="col-sm-6">

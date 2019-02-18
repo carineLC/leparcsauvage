@@ -1,23 +1,27 @@
-.feature-card {
-  opacity: 0.8;
-  margin: 1rem;
-  &-img {
-    border: 5px $light-grey solid;
-    display: inline-block;
-    border-radius: 50%;
-    transform: translateY(0px);
-    animation: float 4s ease-in-out infinite;
-    margin: 0.5rem;
-    img {
-      width: 4rem;
-      height: 4rem;
-      object-fit: cover;
-      margin: 1rem;
-    }
+.feature {
+  p, h2 {
+    color: $light-grey !important;
   }
-  &:hover {
-    opacity: 1;
-    cursor: pointer;
+  .feature-card {
+    margin: 0 1rem;
+    &-img {
+      border: 5px $light-grey solid;
+      display: inline-block;
+      border-radius: 50%;
+      transform: translateY(0px);
+      animation: float 4s ease-in-out infinite;
+      margin: 0.5rem;
+      img {
+        width: 4rem;
+        height: 4rem;
+        object-fit: cover;
+        margin: 1rem;
+      }
+    }
+    &:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
   }
 }
 
