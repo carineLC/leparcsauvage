@@ -13,14 +13,13 @@
  padding: 0 1rem;
 }
 
-@media screen and (min-width: 768px) {
+.team-card-infos {
+  transform: translateY(100%);
+  transition: ease 400ms all;
+}
+.team-card:hover {
   .team-card-infos {
-    transform: translateY(100%);
-    transition: ease 400ms all;
-  }
-  .team-card:hover {
-    .team-card-infos {
-      transform: translateY(0%);
-    }
+    transform: translateY(0%);
   }
 }
+
