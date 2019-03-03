@@ -10,12 +10,10 @@
     <%= favicon_link_tag 'favicon.ico' %>
   </head>
   <body>
-    <div class="main-container">
-      <%= render 'shared/navbar' %>
-      <%#= render 'shared/flashes' %>
-      <%= yield %>
-      <%= render 'shared/footer' %>
-    </div>
+    <%= render 'shared/navbar' %>
+    <%#= render 'shared/flashes' %>
+    <%= yield %>
+    <%= render 'shared/footer' %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
   </body>
