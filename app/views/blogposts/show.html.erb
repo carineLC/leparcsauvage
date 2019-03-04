@@ -9,7 +9,7 @@
   </div>
   <div class="row">
     <div class="col mb-5">
-      <%= cl_image_tag @blogpost.photo, class:"blogpost-photo-lps"%>
+      <%= cl_image_tag @blogpost.photo, quality: :auto, fetch_format: :auto, class:"blogpost-photo-lps" %>
     </div>
   </div>
   <div class="row">

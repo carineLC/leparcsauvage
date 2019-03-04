@@ -1,18 +1,52 @@
 <footer>
-  <div class="footer-lps d-flex justify-content-between align-items-center">
-    <div class="footer-lps__links d-flex">
-      <%= link_to "https://www.instagram.com/leparcsauvage/", target: "_blank", class: "d-flex justify-content-center align-items-center" do %>
-        <i class="fab fa-instagram font-size-subtitle"></i>
-      <% end %>
-       <%= link_to "https://web.facebook.com/Jackleparcsauvage/", target: "_blank", class: "d-flex justify-content-center align-items-center align-items-center" do %>
-        <i class="fab fa-facebook-f font-size-subtitle"></i>
-      <% end %>
-       <%= link_to "https://twitter.com/jackparcsauvage", target: "_blank", class: "d-flex justify-content-center align-items-center align-items-center" do %>
-        <i class="fab fa-twitter font-size-subtitle"></i>
-      <% end %>
-    </div>
-    <div class="footer-lps__legalnotices text-center">
-      <%= link_to "Mentions légales", legal_notices_path %>
+  <div class="footer-lps">
+    <div class="container footer-lps--container">
+      <div class="row justify-content-between align-items-center">
+        <div class="col-sm-12 col-md-3">
+          <div class="footer-lps__links d-flex flex-row justify-content-center justify-content-md-start mb-3">
+            <%= link_to "https://www.instagram.com/leparcsauvage/", target: "_blank", class: "d-flex justify-content-center align-items-center" do %>
+              <i class="fab fa-instagram font-size-subtitle"></i>
+            <% end %>
+             <%= link_to "https://web.facebook.com/Jackleparcsauvage/", target: "_blank", class: "d-flex justify-content-center align-items-center align-items-center" do %>
+              <i class="fab fa-facebook-f font-size-subtitle"></i>
+            <% end %>
+             <%= link_to "https://twitter.com/jackparcsauvage", target: "_blank", class: "d-flex justify-content-center align-items-center align-items-center" do %>
+              <i class="fab fa-twitter font-size-subtitle"></i>
+            <% end %>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <div class="footer-lps__address d-flex flex-column align-items-center mb-3">
+            <p class="mb-2"><strong>Le Parc Sauvage</strong></p>
+            <div class="row">
+              <div class="col-md-12 col-lg-6">
+                <div class="text-lg-right text-center">
+                  <p>
+                    Lieu dit Le Claud
+                    <br>
+                    24320 La Tour Blanche Cercles
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-12 col-lg-6">
+                <div class="d-flex justify-content-center justify-content-lg-start">
+                  <i class="fas fa-phone mr-1"></i>
+                  <p>06 83 10 87 39</p>
+                </div>
+                <div class="d-flex justify-content-center justify-content-lg-start">
+                  <i class="fas fa-envelope mr-1"></i>
+                  <%= mail_to "contactflyprod@gmail.com", nil %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-3">
+          <div class="footer-lps__legalnotices d-flex justify-content-center justify-content-md-end mb-3">
+            <%= link_to "Mentions légales", legal_notices_path %>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </footer>

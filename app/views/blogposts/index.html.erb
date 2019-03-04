@@ -11,12 +11,12 @@
         <h2><%= blogpost.title %></h2>
       </div>
       <div class="row">
-        <div class="col-xs-12 col-lg-5">
+        <div class="col-sm-12 col-lg-5">
           <%= link_to blogpost_path(blogpost) do %>
-            <%= cl_image_tag blogpost.photo %>
+            <%= cl_image_tag blogpost.photo, quality: :auto, fetch_format: :auto %>
           <% end %>
         </div>
-        <div class="col-xs-12 col-lg-7">
+        <div class="col-sm-12 col-lg-7">
           <div class="mt-4 text-justify">
             <%= blogpost.description.truncate(600, separator: ' ').html_safe %>
             <p><em>Publié le <%= blogpost.created_at.strftime("%d/%m/%Y") %></em></p>
