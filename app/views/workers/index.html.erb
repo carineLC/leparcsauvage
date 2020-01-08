@@ -1,0 +1,37 @@
+<% content_for :meta_title, "Le Parc Sauvage - Notre équipe" %>
+<% content_for :meta_description, "Le Parc Sauvage - Notre équipe" %>
+
+<%= render(
+  'shared/banner',
+  img: "team_page.png",
+  img_alt: "Equipe",
+  img_title: "Equipe",
+  title: "L'Équipe du Parc Sauvage"
+) %>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <% @workers.each do |worker| %>
+    <div class="col-sm-12 col-md-6 col-lg-3 d-flex">
+      <div class="card team-card shadow bg-white rounded mb-4 flex-fill">
+        <%= image_tag "alexandre.png", alt: "Alexandre", title: "Alexandre", class: "card-img-top"%>
+        <div class="card-body">
+          <div class="card-title">
+            <h2><%= worker.name %></h2>
+          </div>
+          <div class="card-text">
+            <p><%= worker.position %></p>
+          </div>
+        </div>
+
+        <div class="team-card-infos text-center d-none d-md-block">
+          <p><%= worker.description %></p>
+        </div>
+        <div class="team-card-infos-small-devices text-center d-block d-md-none text-center ">
+          <p><%= worker.description %></p>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
