@@ -17,3 +17,21 @@
   display: block;
   margin: auto;
 }
+
+.link-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: $dark-green;
+  margin: 0 1rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 3.5rem;
+  &:hover {
+    color: white;
+    background-color: $green;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .15);
+    text-decoration: none;
+  }
+}
