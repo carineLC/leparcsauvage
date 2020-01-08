@@ -21,7 +21,17 @@ ActiveAdmin.register Worker do
     column :name
     column :position
     column :description
+    column(:photo) { |w| image_tag(w.photo.url) }
     actions
+  end
+
+  show do
+    attributes_table do
+      row :name
+      row :position
+      row :description
+      row(:photo) { |w| image_tag(w.photo.url) }
+    end
   end
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
