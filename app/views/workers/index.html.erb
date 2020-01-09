@@ -14,7 +14,7 @@
     <% @workers.each do |worker| %>
     <div class="col-sm-12 col-md-6 col-lg-3 d-flex">
       <div class="card team-card shadow bg-white rounded mb-4 flex-fill">
-        <%= image_tag "alexandre.png", alt: "Alexandre", title: "Alexandre", class: "card-img-top"%>
+        <%= cl_image_tag worker.photo, alt: "Alexandre", title: "Alexandre", class: "card-img-top"%>
         <div class="card-body">
           <div class="card-title">
             <h2><%= worker.name %></h2>
