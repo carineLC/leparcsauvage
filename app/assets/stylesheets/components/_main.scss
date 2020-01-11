@@ -4,6 +4,8 @@ html {
 
 body {
   min-height: 100vh;
+  position: relative;
+  margin: 0;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -13,6 +15,10 @@ body {
   -ms-justify-content: space-between;
   -webkit-justify-content: space-between;
   justify-content: space-between;
+}
+
+.main {
+  flex: 1 0 auto;
 }
 
 .main-title {
