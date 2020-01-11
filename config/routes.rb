@@ -12,7 +12,6 @@ Rails.application.routes.draw do
   get 'parc-de-vision', to: 'pages#vision_park', as: :vision_park
   get 'centre-de-sauvegarde', to: 'pages#backup_center', as: :backup_center
 
-  get 'equipe', to: 'pages#team', as: :team
   get 'partenariats', to: 'pages#partnerships', as: :partnerships
   get 'mentions-legales', to: 'pages#legal_notices', as: :legal_notices
 
