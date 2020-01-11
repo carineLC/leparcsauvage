@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :workers, only: %i[index]
 
   get 'ferme-pedagogique', to: 'pages#pedagogical_farm', as: :pedagogical_farm
-  get 'fauconnerie', to: 'pages#falconry', as: :falconry
+  get 'volerie', to: 'pages#falconry', as: :falconry
   get 'parc-de-vision', to: 'pages#vision_park', as: :vision_park
   get 'centre-de-sauvegarde', to: 'pages#backup_center', as: :backup_center
 
