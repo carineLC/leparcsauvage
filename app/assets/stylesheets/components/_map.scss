@@ -1,5 +1,11 @@
 #map {
-  flex: 1 0 auto;
+  width: 100%;
   margin-bottom: 1.5rem;
-  height: 31.25rem !important;
+  height: 33rem !important;
+}
+
+@media(max-width:1200px) {
+  #map {
+    height: 34.2rem !important;
+  }
 }
