@@ -21,7 +21,7 @@ ActiveAdmin.register Worker do
     column :name
     column :position
     column :description
-    column(:photo) { |w| image_tag(w.photo.url) }
+    column(:photo) { |w| image_tag(w.photo.url) if w.photo.present? }
     actions
   end
 
@@ -30,7 +30,7 @@ ActiveAdmin.register Worker do
       row :name
       row :position
       row :description
-      row(:photo) { |w| image_tag(w.photo.url) }
+      row(:photo) { |w| image_tag(w.photo.url) if w.photo.present? }
     end
   end
 end
