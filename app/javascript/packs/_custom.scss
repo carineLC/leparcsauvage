@@ -3,10 +3,16 @@
 }
 
 .card-img-top {
-  padding: 0.75rem;
-  border-radius: 0.85rem;
   height: 10rem;
   object-fit: cover;
+
+  &--padding {
+    padding: 0.75rem
+  }
+
+  &--border-radius {
+    border-radius: 0.85rem;
+  }
 }
 
 .card-body, .card-title, .card-text {

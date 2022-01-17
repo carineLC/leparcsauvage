@@ -3,6 +3,7 @@ class PagesController < ApplicationController
 
   def home
     @blogposts = Blogpost.order('created_at DESC')
+    @pictures = Picture.where(location: 'accueil').order(id: :desc).limit(5)
   end
 
   def pedagogical_farm; end
