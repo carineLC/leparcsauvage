@@ -1,5 +1,8 @@
 ActiveAdmin.register Picture do
     permit_params :location, :description, :photo
+
+    filter :location, as: :select, collection: Picture::LOCATIONS
+    filter :description
   
     form do |f|
       tabs do

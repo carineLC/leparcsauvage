@@ -7,11 +7,17 @@ class PagesController < ApplicationController
     @pictures = Picture.home
   end
 
-  def pedagogical_farm; end
+  def pedagogical_farm 
+    @pictures = Picture.pedagogical_farm
+  end
 
-  def falconry; end
+  def falconry
+    @pictures = Picture.falconry
+  end
 
-  def vision_park; end
+  def vision_park
+    @pictures = Picture.vision_park
+  end
 
   def backup_center; end
 
