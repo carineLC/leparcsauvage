@@ -17,6 +17,7 @@
         <%= link_to "Actualités", blogposts_path, class: "navbar-lps__link d-flex align-items-center" %>
         <%= link_to "L'équipe",workers_path, class: "navbar-lps__link d-flex align-items-center" %>
         <%= link_to "Partenariats", partnerships_path, class: "navbar-lps__link d-flex align-items-center" %>
+        <%= link_to "Boutique", 'http://www.leparcsauvageshop.webnode.fr', class: "navbar-lps__link d-flex align-items-center", target: '_blank' %>
         <div class="navbar-lps__dropdown">
           <%= content_tag "a", "Infos pratiques", class: "navbar-lps__link d-flex align-items-center" %>
             <div class="navbar-lps__content--left">
@@ -50,6 +51,7 @@
               <%= link_to "Actualités", blogposts_path, class: "navbar-lps-mobile__link" %>
               <%= link_to "L'équipe",workers_path, class: "navbar-lps-mobile__link" %>
               <%= link_to "Partenariats", partnerships_path, class: "navbar-lps-mobile__link" %>
+              <%= link_to "Boutique", 'http://www.leparcsauvageshop.webnode.fr', class: "navbar-lps-mobile__link", target: '_blank' %>
               <div class="navbar-lps-mobile__dropdown">
                 <%= link_to "Infos pratiques", "#collapseMenuInfos", class: "navbar-lps-mobile__link dropdown-toggle", id:"link_infos", data: { toggle: "collapse" }, aria: { expanded: "false", controls: "collapseMenuInfos" } %>
                 <div class="navbar-lps-mobile__content collapse" id="collapseMenuInfos">
