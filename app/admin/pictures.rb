@@ -33,4 +33,3 @@ ActiveAdmin.register Picture do
       end
     end
   end
-  

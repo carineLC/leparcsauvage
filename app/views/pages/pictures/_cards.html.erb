@@ -1,7 +1,7 @@
 <% if pictures.present? %>
   <div class="row mb-32">
-    <% pictures.each do |picture| %>
-      <div class="col-sm-12 col-md-3">
+    <% pictures.each_with_index do |picture, index| %>
+      <div class="col-sm-12 col-md-3 <%= 'mb-sm-4 mb-md-0' unless index + 1 == pictures.size %>">
         <div class="card border-0">
           <%= cl_image_tag picture.photo, class: 'card-img-top rounded' %>
           <div class="card-body p-0">
