@@ -1,0 +1,14 @@
+<% if pictures.present? %>
+  <div class="row mb-5">
+    <% pictures.each do |picture| %>
+      <div class="col-sm-12 col-md-3">
+        <div class="card border-0">
+          <%= cl_image_tag picture.photo, class: 'card-img-top rounded' %>
+          <div class="card-body p-0">
+            <p class="card-text text-left"><%= picture.description %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
