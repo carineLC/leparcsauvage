@@ -4,7 +4,7 @@
 <div class="banner-home">
   <%= render "shared/features" %>
 </div>
-<div class="container mb-0 mt-5">
+<div class="container mt-5">
   <div class="row">
     <div class="col">
       <div class="d-flex justify-content-center">
@@ -22,8 +22,12 @@
   </div>
 </div>
 <div class="container">
+  <%= render 'pages/pictures/cards', pictures: @pictures %>
   <% if @plan.present? %>
-    <%= cl_image_tag @plan.photo, class: 'img-fluid rounded mx-auto d-block mt-5 w-50' %>
+    <%= link_to '#', id: 'image-source-link' do %>
+      <%= cl_image_tag @plan.photo, class: 'img-fluid rounded mx-auto d-block mt-5 w-50', id:'image-source' %>
+    <% end %>
+    <%= render 'pages/modal' %>
   <% end %>
   <div class="main-title">
     <h1>Les dernières actualités du Parc Sauvage</h1>
@@ -59,7 +63,6 @@
       <div class="main-title">
         <h1>Le Parc Sauvage, qui sommes-nous ?</h1>
       </div>
-      <%= render 'pages/pictures/cards', pictures: @pictures %>
       <p>
         Venez découvrir l’univers des animaux dans un cadre sauvage et en sécurité comme au temps d’autrefois.
         <br><br>
