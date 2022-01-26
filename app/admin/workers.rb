@@ -1,6 +1,9 @@
 ActiveAdmin.register Worker do
   permit_params :name, :description, :position, :photo
 
+  filter :name
+  filter :description
+  filter :position
 
   form do |f|
     tabs do

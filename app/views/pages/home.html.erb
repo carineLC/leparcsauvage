@@ -4,7 +4,7 @@
 <div class="banner-home">
   <%= render "shared/features" %>
 </div>
-<div class="container mb-0 mt-5">
+<div class="container mt-5">
   <div class="row">
     <div class="col">
       <div class="d-flex justify-content-center">
@@ -22,6 +22,13 @@
   </div>
 </div>
 <div class="container">
+  <%= render 'pages/pictures/cards', pictures: @pictures %>
+  <% if @plan.present? %>
+    <%= link_to '#', id: 'image-source-link' do %>
+      <%= cl_image_tag @plan.photo, class: 'img-fluid rounded mx-auto d-block mt-5 w-50', id:'image-source' %>
+    <% end %>
+    <%= render 'pages/modal' %>
+  <% end %>
   <div class="main-title">
     <h1>Les dernières actualités du Parc Sauvage</h1>
   </div>
@@ -29,7 +36,7 @@
     <% @blogposts.first(4).each do |blogpost| %>
       <div class="col-sm-12 col-md-6 col-lg-3 d-flex">
         <div class="card shadow bg-white rounded mb-4 flex-fill">
-          <%= cl_image_tag blogpost.photo, quality: :auto, fetch_format: :auto, class:"card-img-top" %>
+          <%= cl_image_tag blogpost.photo, quality: :auto, fetch_format: :auto, class:"card-img-top card-img-top--padding card-img-top--border-radius" %>
           <div class="card-body d-flex flex-column justify-content-between">
             <div class="card-text">
               <p><%= blogpost.title %></p>
