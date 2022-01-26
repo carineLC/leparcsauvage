@@ -2,7 +2,7 @@
   "name": "leparcsauvage",
   "private": true,
   "dependencies": {
-    "@rails/webpacker": "3.5",
+    "@rails/webpacker": "^5.4.3",
     "bootstrap": "^4.2.1",
     "jquery": "^3.3.1",
     "mapbox-gl": "^0.53.0-beta.1",
