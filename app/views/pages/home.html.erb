@@ -25,7 +25,7 @@
   <%= render 'pages/pictures/cards', pictures: @pictures %>
   <% if @plan.present? %>
     <%= link_to '#', id: 'image-source-link' do %>
-      <%= cl_image_tag @plan.photo, class: 'img-fluid rounded mx-auto d-block mt-5 w-50', id:'image-source' %>
+      <%= cl_image_tag @plan.photo, class: 'img-fluid rounded mx-auto d-block mt-5 w-md-50', id:'image-source' %>
     <% end %>
     <%= render 'pages/modal' %>
   <% end %>

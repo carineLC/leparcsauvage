@@ -2,6 +2,20 @@
   margin-bottom: 2em;
 }
 
-.mw-50 {
+.mw-md-50 {
   max-width: 50% !important;
+}
+
+.w-md-50 {
+  width: 50% !important;
+}
+
+@include media-breakpoint-down(sm) {
+  .mw-md-50 {
+    max-width: 100% !important
+  }
+
+  .w-md-50 {
+    width: 100% !important;
+  }
 }
