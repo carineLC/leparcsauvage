@@ -10,6 +10,14 @@
   justify-content: center;
 }
 
+@include media-breakpoint-down(md) {
+  @media (orientation: landscape) {
+    .banner-home {
+      height: 160vh;
+    }
+  }
+}
+
 .home-lps-images {
   padding: 0.75rem;
   max-width: 100%;
