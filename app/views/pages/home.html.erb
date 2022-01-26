@@ -7,7 +7,7 @@
 <div class="container mt-5">
   <div class="row">
     <div class="col">
-      <div class="d-flex justify-content-center">
+      <div class="d-flex justify-content-center mb-5">
         <%= link_to "https://www.instagram.com/leparcsauvage/", target: "_blank", class: "link-circle" do %>
           <i class="fab fa-instagram font-size-subtitle"></i>
         <% end %>
@@ -25,7 +25,7 @@
   <%= render 'pages/pictures/cards', pictures: @pictures %>
   <% if @plan.present? %>
     <%= link_to '#', id: 'image-source-link' do %>
-      <%= cl_image_tag @plan.photo, class: 'img-fluid rounded mx-auto d-block mt-5 w-50', id:'image-source' %>
+      <%= cl_image_tag @plan.photo, class: 'img-fluid rounded mx-auto d-block mt-5 w-md-50', id:'image-source' %>
     <% end %>
     <%= render 'pages/modal' %>
   <% end %>
