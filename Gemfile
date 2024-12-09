@@ -16,7 +16,7 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker', '~> 5.4.3'
 gem 'cloudinary', '~> 1.9.1'
-gem 'carrierwave', '~> 1.2'
+gem 'carrierwave', '~> 1.3'
 gem 'sitemap_generator'
 gem 'friendly_id', '~> 5.2.4'
 
